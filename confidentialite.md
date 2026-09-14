@@ -11,10 +11,14 @@ permalink: /confidentialite/
 > artificielle situés aux **États-Unis** (OpenAI, OpenRouter, Anthropic). Tout le reste est
 > stocké chez Supabase, à **Paris**. **Aucune publicité, aucun pistage, aucune revente.** La
 > voix n'est jamais conservée ; les photos sont effacées au bout de **90 jours** ; le texte
-> des échanges est conservé tant que le compte existe. Vous pouvez demander la suppression
-> du compte et des données à tout moment en nous écrivant.
+> des échanges est conservé tant que le compte existe. **Pendant la bêta**, l'app enregistre
+> aussi les **écrans consultés et les erreurs techniques** (sans le contenu des échanges) et
+> garde une **copie complète des échanges avec le tuteur envoyés à l'IA**, pour comprendre et corriger Ari :
+> **90 jours au plus**, lue par le fondateur seul. Vous pouvez demander la suppression du
+> compte et des données à tout moment en nous écrivant.
 >
-> Version 0.2 (bêta), datée du 14 septembre 2026.
+> Version 0.3 (bêta), datée du 14 septembre 2026 — cette version ajoute les journaux de la
+> bêta (sections 3.7 et 3.8, durées en section 5).
 
 ---
 
@@ -137,15 +141,80 @@ servent aux bilans et à la conversation parent.
 
 | Donnée | Ce qu'elle contient | Ce qu'elle ne contient jamais |
 |---|---|---|
-| Journal des appels d'IA | Rôle (tuteur, lecture de photo…), modèle utilisé, durée, nombre de jetons, coût estimé, succès ou échec, identifiant de l'enfant, identifiants de séance et d'écran | Le texte envoyé, le texte reçu, le prénom |
-| Événements d'usage | Type d'événement (début de tour, fin d'écran…), numéro de tour, écran concerné, horodatage | Le contenu des échanges |
+| Journal des appels d'IA | Rôle (tuteur, lecture de photo…), modèle utilisé, durée, nombre de jetons, coût estimé, succès ou échec, identifiant de l'enfant, identifiants de séance et d'écran | Le texte envoyé, le texte reçu, le prénom (pendant la bêta, une copie complète des échanges vit dans un journal **à part**, décrit en 3.8) |
+| Événements de séance | Type d'événement (début de tour, fin d'écran…), numéro de tour, écran concerné, horodatage | Le contenu des échanges |
+| Événements d'usage (bêta) | Ce qui se passe **autour** des séances : liste ci-dessous | Le mot de passe, le code PIN, le contenu des échanges, le prénom, l'e-mail |
 | Journal de purge | Nombre de photos candidates, supprimées, en échec, à chaque passage | Les chemins des fichiers, l'identifiant de l'enfant |
 | Version de l'app | Le numéro de build installé, pour vérifier qu'il est encore pris en charge | — |
+
+**Les événements d'usage, ajoutés pendant la bêta.** Pour comprendre comment l'application
+est utilisée et où elle casse, l'app envoie à notre serveur, par petits lots, ce qui se passe
+autour des séances :
+
+- l'**ouverture** de l'app, son passage à l'arrière-plan et son retour au premier plan ;
+- la **connexion** et la déconnexion du parent, avec la *méthode* utilisée (code reçu par
+  e-mail, mot de passe, inscription, récupération de mot de passe) — jamais le secret ;
+- la saisie du **code PIN** parent : uniquement son *issue* (réussie, ratée, verrouillée) ;
+- les **écrans consultés** (nom de l'écran, temps passé dessus, parfois un détail comme la
+  page affichée ou l'étape en cours), et l'entrée ou la sortie d'un **mode** (Apprentissage,
+  Devoirs, Dictée) ;
+- les **erreurs techniques** non rattrapées : la classe de l'erreur, l'écran où elle s'est
+  produite, un code court s'il y en a un, et les chemins du code concerné (40 lignes au plus).
+
+Chaque événement porte l'identifiant de votre compte, celui de l'enfant actif s'il y en a un,
+la séance en cours s'il y en a une, la version de l'app et sa plateforme (iPhone ou Android),
+et un identifiant tiré au hasard à chaque lancement de l'app.
+
+Ce que ces événements **ne contiennent jamais** :
+
+- **votre mot de passe et votre code PIN** : ni la valeur, ni un fragment, ni même leur
+  longueur. Le serveur refuse tout événement qui en porterait un ;
+- **le contenu des échanges** de votre enfant avec Ari, et son prénom. Le message brut d'une
+  erreur technique, qui pourrait en recopier une phrase, est retiré par l'app avant l'envoi,
+  et une seconde fois par le serveur ;
+- votre adresse e-mail.
+
+Ces événements ne sont lus que par le fondateur (section 10) et ne servent à aucune mesure
+d'audience ni publicité (section 8).
 
 Sur le téléphone lui-même, l'app garde seulement : un réglage local (bandeau de première
 rencontre fermé ou non), la date de votre dernière visite des bilans, un cache audio
 temporaire, et, si l'envoi a échoué, les photos en attente d'envoi. Le jeton de connexion
 est conservé par la bibliothèque Supabase.
+
+### 3.8 Pendant la bêta : le journal complet des échanges avec l'IA
+
+Pendant la bêta, et seulement pendant la bêta, nous gardons pour **chaque réplique d'Ari** une
+copie exacte de ce que le modèle d'IA a reçu et de ce qu'il a rendu. C'est un journal **à
+part**, distinct de l'historique de séance (3.5) et du journal des appels d'IA (3.7).
+
+**Ce qu'il contient.** Côté requête : le contexte de séance envoyé au modèle (dont le
+**prénom** et la **classe** de l'enfant, la notion travaillée ou l'énoncé du devoir),
+l'**historique complet du tour** (ce que l'enfant a dit, transcrit mot à mot ; ce qu'Ari a
+répondu), la description du visuel affiché à l'écran, les **chemins** des photos du cahier
+(le nom du fichier, jamais l'image), les noms des outils mis à disposition du modèle et les
+réglages de l'appel. Côté réponse : la **sortie brute** du modèle (texte, appels d'outils,
+raison d'arrêt, jetons consommés) et ce qui a réellement été dit à l'enfant après nos filtres.
+Le texte des consignes d'Ari (le « prompt système ») est gardé une seule fois par version,
+à part.
+
+**Pourquoi.** Pour comprendre pourquoi Ari a dit ce qu'il a dit, et le corriger. Un tuteur qui
+ne doit jamais donner la réponse se règle en relisant ses tours : là où il en a trop dit, où
+il s'est trompé, où il a mal compris l'enfant. Le journal des appels d'IA (3.7), qui n'a pas
+le texte, ne permet pas ce travail.
+
+**Ce que ce journal n'ajoute pas.** Aucun envoi supplémentaire : c'est une copie, chez
+Supabase à Paris, de ce qui est déjà transmis à nos prestataires pour faire fonctionner Ari
+(section 4). Aucune photo n'y est stockée.
+
+**Qui le lit.** Le **fondateur, seul**, directement dans la base de données. Ni l'application,
+ni le tableau de bord de suivi (section 10) n'y ont accès : la base refuse toute lecture autre
+que celle du serveur.
+
+**Combien de temps.** 90 jours au plus (section 5).
+
+**Ce journal est propre à la bêta.** Il sera retiré à la fin de la bêta, données comprises.
+Cette politique changera de version ce jour-là.
 
 ## 4. Qui reçoit vos données
 
@@ -164,13 +233,14 @@ Précisions :
   explicitement à OpenAI de **ne pas conserver l'échange** après la réponse (paramètre
   `store: false`), parce qu'il s'agit de données de mineurs.
 - Aucun autre tiers ne reçoit de données : **aucun outil d'analyse d'audience, aucun outil
-  de publicité, aucun outil de rapport de plantage** n'est intégré à l'application.
+  de publicité, aucun outil tiers de rapport de plantage** n'est intégré à l'application.
+  Les erreurs techniques sont enregistrées par nous-mêmes, sur nos serveurs (3.7).
 - Apple (TestFlight) et Google (Google Play) distribuent l'application et peuvent, de leur
   côté, vous demander un retour ; nous ne leur transmettons aucune donnée de l'enfant.
 
 Ces prestataires étant établis hors de l'Union européenne, les données qui leur sont
-envoyées font l'objet d'un **transfert international**. Le cadre juridique de ces
-transferts sera précisé dans une prochaine version de cette politique.
+envoyées font l'objet d'un **transfert international**. Le cadre juridique de ces transferts
+sera précisé dans une prochaine version de cette politique.
 
 ## 5. Combien de temps nous conservons les données
 
@@ -182,7 +252,9 @@ transferts sera précisé dans une prochaine version de cette politique.
 | Audio des dictées lues par Ari | **Tant que le compte existe** | Aucune purge automatique à ce jour |
 | Souvenirs pédagogiques (maîtrise, lexique, portrait) | **Tant que le compte existe** | Aucune purge automatique à ce jour |
 | Journal des appels d'IA | **Tant que le compte existe** ; conservé sans identifiant d'enfant après suppression de l'enfant | Le lien vers l'enfant est effacé (`set null`), la ligne technique reste |
-| Événements d'usage | **30 jours** prévus | La purge est écrite mais **pas encore activée** |
+| Événements de séance (tours, écrans) | **30 jours** prévus | La purge est écrite mais **pas encore activée** |
+| Événements d'usage (3.7, bêta) | **90 jours**, effacés automatiquement (purge hebdomadaire) | Purge le dimanche à 4 h, active depuis le 14 septembre 2026 ; jamais en dessous de 30 jours. La suppression du compte emporte les événements rattachés à l'enfant, **pas** ceux sans enfant (connexion, PIN, écrans de l'espace parent) : effacés au plus tard à la purge ; la procédure manuelle de suppression doit les effacer avant |
+| Journal complet des échanges avec l'IA (3.8, bêta) | **90 jours**, effacés automatiquement (purge hebdomadaire) | Purge le dimanche à 4 h, active depuis le 14 septembre 2026 ; jamais en dessous de 30 jours. Ce journal n'est **pas** emporté par la suppression du compte : il est effacé à la main dans la même demande (section 7). Retiré en fin de bêta |
 | Compte parent, PIN, profil enfant | **Tant que le compte existe** | La suppression du compte entraîne, en cascade, celle du profil, des séances, des échanges, des souvenirs et des bilans |
 
 ## 6. Mineurs et consentement
@@ -202,9 +274,12 @@ Vous disposez, pour vous et pour votre enfant, des droits suivants :
 - **Rectification** : corriger une donnée. Le prénom, le genre, les matières et les notions
   prioritaires se modifient directement dans l'espace parent (« Mon compte »). La classe et
   l'e-mail se modifient sur demande.
-- **Effacement** : faire supprimer le compte et toutes les données de l'enfant. Pendant la
-  bêta, la suppression se fait **sur demande par e-mail**, dans un délai d'un mois au plus ;
-  l'application ne propose pas encore de bouton de suppression automatique.
+- **Effacement** : faire supprimer le compte et toutes les données de l'enfant. Les journaux
+  de la bêta (3.7 et 3.8) ne sont pas tous emportés par la suppression du compte elle-même :
+  ce qui n'est pas effacé en cascade l'est à la main, dans la même demande, et au plus tard à
+  la purge à 90 jours (section 5). Pendant la bêta, la suppression se fait **sur demande par
+  e-mail**, dans un délai d'un mois au plus ; l'application ne propose pas encore de bouton
+  de suppression automatique.
 - **Retrait du consentement** : à tout moment, avec le même effet qu'une demande
   d'effacement.
 - **Portabilité** : obtenir vos données dans un format lisible.
@@ -231,7 +306,9 @@ compte, en précisant le prénom de l'enfant concerné.
 - La base de données applique une **isolation par famille** : un parent ne peut lire que
   les données de ses propres enfants.
 - Le PIN parent est protégé par une empreinte **Argon2id** avec verrouillage après échecs.
-- Les journaux techniques ne contiennent **jamais** le contenu des échanges ni la voix.
+- Les journaux techniques (3.7) ne contiennent **jamais** le contenu des échanges ni la voix.
+  La seule copie complète des échanges hors historique de séance est le journal de la bêta
+  (3.8) : lisible par le fondateur seul, jamais la voix, jamais les photos.
 - Les mots de passe sont gérés par Supabase Auth. La longueur minimale est de 6 caractères.
 
 ## 10. Phase bêta : ce que l'équipe peut voir
@@ -239,12 +316,16 @@ compte, en précisant le prénom de l'enfant concerné.
 Aristocles est en version bêta. Pour améliorer le tuteur, l'équipe dispose d'un **tableau
 de bord de suivi des testeurs**, protégé par mot de passe, qui montre par enfant : le
 prénom, les séances, les exercices résolus, les **synthèses rédigées** de chaque écran, le
-résumé de séance, les coûts et durées des appels d'IA, et les événements d'usage. Ce tableau
-de bord **ne montre jamais le verbatim** des échanges entre l'enfant et Ari.
+résumé de séance, les coûts et durées des appels d'IA, et les événements de séance. Ce
+tableau de bord **ne montre jamais le verbatim** des échanges entre l'enfant et Ari, et ne
+lit ni les événements d'usage ni le journal complet des échanges avec l'IA.
 
-Les échanges bruts restent en base et peuvent être consultés directement par l'équipe pour
-diagnostiquer un problème signalé par une famille. Pendant la bêta, cet accès direct est
-limité au fondateur d'Aristocles.
+Les échanges bruts (historique de séance, 3.5), les événements d'usage (3.7) et le journal
+complet des échanges avec l'IA (3.8) restent en base et sont consultés directement, dans la
+base de données, par le **fondateur seul** : pour diagnostiquer un problème signalé par une
+famille, et pour relire les tours d'Ari afin d'améliorer ses consignes. Personne d'autre n'a
+cet accès pendant la bêta. Les journaux propres à la bêta (3.7 événements d'usage, 3.8) sont
+gardés 90 jours au plus ; le journal 3.8 sera retiré à la fin de la bêta.
 
 ## 11. Modifications de cette politique
 

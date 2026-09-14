@@ -9,11 +9,14 @@ permalink: /consentement/
 > l'app envoie sa **voix** (transcrite puis effacée), les **photos** de son cahier (gardées
 > 90 jours) et le **texte des échanges** (gardé tant que le compte existe) à des services
 > d'intelligence artificielle aux États-Unis. Le reste est stocké à Paris. Pas de pub, pas de
-> pistage, pas de revente. Nous vous demandons un **accord explicite**, que vous pouvez
-> **retirer à tout moment** par e-mail : le compte et les données sont alors supprimés.
+> pistage, pas de revente. **Pendant la bêta**, l'app enregistre aussi les **écrans consultés
+> et les erreurs techniques** (sans le contenu des échanges) et garde une **copie complète des
+> échanges avec le tuteur envoyés à l'IA** pour comprendre et corriger Ari : 90 jours au plus,
+> lue par le fondateur seul. Nous vous demandons un **accord explicite**, que vous pouvez **retirer à
+> tout moment** par e-mail : le compte et les données sont alors supprimés.
 >
 > Ce texte accompagne la [politique de confidentialité](/aristocles-site/confidentialite/),
-> qui détaille chaque point. Version 0.2, 14 septembre 2026.
+> qui détaille chaque point. Version 0.3, 14 septembre 2026 (ajout des journaux de la bêta).
 
 ---
 
@@ -46,7 +49,9 @@ choisissez.
 | Les **photos** du cahier | Stockées chez Supabase (Paris), dans un espace privé ; lues par un service d'IA (OpenRouter puis Anthropic, États-Unis ; en mode Devoirs, également OpenAI) | **90 jours**, puis effacées automatiquement |
 | Le **texte des échanges** avec Ari (ce que votre enfant a dit, transcrit ; ce qu'Ari a répondu), les exercices faits, les dictées, les synthèses de séance et vos bilans | Supabase, Paris ; le texte est transmis aux services d'IA (OpenAI pour le mode Devoirs et les indices ; OpenRouter/Anthropic pour le reste) pour qu'Ari réponde et pour rédiger les bilans | Tant que le compte existe |
 | Des **souvenirs pédagogiques** : les notions acquises ou fragiles, les mots de dictée qui posent problème | Supabase, Paris | Tant que le compte existe |
-| Des **mesures techniques** : durée et coût des appels d'IA, événements d'usage | Supabase, Paris | Tant que le compte existe (événements : 30 jours prévus) |
+| Des **mesures techniques** : durée et coût des appels d'IA (sans le texte), événements de séance (tours, écrans) | Supabase, Paris | Tant que le compte existe (événements de séance : 30 jours prévus) |
+| **Pendant la bêta**, des **événements d'usage** : ouverture de l'app, connexion (la méthode, jamais le mot de passe), saisie du PIN (réussie ou ratée, jamais le code), écrans consultés et temps passé, modes ouverts, erreurs techniques (type, écran, code, chemins du code — jamais le message brut ni le contenu des échanges) | Supabase, Paris ; lus par le fondateur seul | **90 jours**, effacés automatiquement (purge hebdomadaire) |
+| **Pendant la bêta**, une **copie complète de ce qui est envoyé à l'IA** à chaque réplique d'Ari : le contexte (prénom, classe, notion ou énoncé), tout l'échange du tour (ce que votre enfant a dit, ce qu'Ari a répondu), les noms des photos (jamais l'image) et la réponse brute du modèle — pour comprendre et corriger Ari | Supabase, Paris ; lue par le fondateur seul ; aucun envoi supplémentaire aux prestataires | **90 jours**, effacés automatiquement (purge hebdomadaire) ; journal retiré en fin de bêta |
 
 Ce que l'application **ne fait pas** : pas de publicité, pas d'outil de mesure d'audience,
 pas de suivi publicitaire, pas de revente ni de cession de données, pas d'accès à votre
@@ -59,6 +64,12 @@ tuteur, l'équipe consulte un tableau de bord de suivi qui montre, par enfant, l
 les séances, les exercices, les **synthèses rédigées** de chaque écran et les coûts. Ce
 tableau de bord **ne montre pas le mot à mot** des échanges. Le texte intégral reste en
 base et peut être relu directement pour diagnostiquer un problème que vous nous signalez.
+
+Pendant la bêta, le **fondateur seul** relit aussi, directement dans la base : la copie
+complète de ce qui est envoyé à l'IA à chaque réplique d'Ari (pour comprendre pourquoi Ari a
+dit ce qu'il a dit, et le corriger), et les événements d'usage (pour voir où l'app est utilisée
+et où elle casse). Ces deux journaux sont gardés 90 jours au plus, personne d'autre n'y a
+accès, et le premier sera retiré à la fin de la bêta.
 
 ## Ce que nous vous demandons
 
