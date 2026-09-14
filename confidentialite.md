@@ -17,8 +17,9 @@ permalink: /confidentialite/
 > **90 jours au plus**, lue par le fondateur seul. Vous pouvez demander la suppression du
 > compte et des données à tout moment en nous écrivant.
 >
-> Version 0.3 (bêta), datée du 14 septembre 2026 — cette version ajoute les journaux de la
-> bêta (sections 3.7 et 3.8, durées en section 5).
+> Version 0.4 (bêta), datée du 15 septembre 2026 — cette version corrige l'effacement des
+> journaux de la bêta (section 5, section 7) : ils sont désormais effacés **immédiatement**
+> avec le compte, en cascade, et non plus survivants jusqu'à la purge à 90 jours.
 
 ---
 
@@ -253,8 +254,8 @@ sera précisé dans une prochaine version de cette politique.
 | Souvenirs pédagogiques (maîtrise, lexique, portrait) | **Tant que le compte existe** | Aucune purge automatique à ce jour |
 | Journal des appels d'IA | **Tant que le compte existe** ; conservé sans identifiant d'enfant après suppression de l'enfant | Le lien vers l'enfant est effacé (`set null`), la ligne technique reste |
 | Événements de séance (tours, écrans) | **30 jours** prévus | La purge est écrite mais **pas encore activée** |
-| Événements d'usage (3.7, bêta) | **90 jours**, effacés automatiquement (purge hebdomadaire) | Purge le dimanche à 4 h, active depuis le 14 septembre 2026 ; jamais en dessous de 30 jours. La suppression du compte emporte les événements rattachés à l'enfant, **pas** ceux sans enfant (connexion, PIN, écrans de l'espace parent) : effacés au plus tard à la purge ; la procédure manuelle de suppression doit les effacer avant |
-| Journal complet des échanges avec l'IA (3.8, bêta) | **90 jours**, effacés automatiquement (purge hebdomadaire) | Purge le dimanche à 4 h, active depuis le 14 septembre 2026 ; jamais en dessous de 30 jours. Ce journal n'est **pas** emporté par la suppression du compte : il est effacé à la main dans la même demande (section 7). Retiré en fin de bêta |
+| Événements d'usage (3.7, bêta) | **90 jours**, effacés automatiquement (purge hebdomadaire) | Effacés **immédiatement** avec le compte (suppression en cascade, depuis le 15 septembre 2026) ; sinon purge hebdomadaire le dimanche à 4 h, active depuis le 14 septembre 2026, jamais en dessous de 30 jours. |
+| Journal complet des échanges avec l'IA (3.8, bêta) | **90 jours**, effacés automatiquement (purge hebdomadaire) | Effacés **immédiatement** avec le compte (suppression en cascade, depuis le 15 septembre 2026) ; sinon purge hebdomadaire le dimanche à 4 h, active depuis le 14 septembre 2026, jamais en dessous de 30 jours. |
 | Compte parent, PIN, profil enfant | **Tant que le compte existe** | La suppression du compte entraîne, en cascade, celle du profil, des séances, des échanges, des souvenirs et des bilans |
 
 ## 6. Mineurs et consentement
@@ -274,20 +275,18 @@ Vous disposez, pour vous et pour votre enfant, des droits suivants :
 - **Rectification** : corriger une donnée. Le prénom, le genre, les matières et les notions
   prioritaires se modifient directement dans l'espace parent (« Mon compte »). La classe et
   l'e-mail se modifient sur demande.
-- **Effacement** : faire supprimer le compte et toutes les données de l'enfant. Les journaux
-  de la bêta (3.7 et 3.8) ne sont pas tous emportés par la suppression du compte elle-même :
-  ce qui n'est pas effacé en cascade l'est à la main, dans la même demande, et au plus tard à
-  la purge à 90 jours (section 5). Pendant la bêta, la suppression se fait **sur demande par
-  e-mail**, dans un délai d'un mois au plus ; l'application ne propose pas encore de bouton
-  de suppression automatique.
+- **Effacement** : faire supprimer le compte et toutes les données de l'enfant, **y compris
+  les journaux de la bêta (3.7 et 3.8), effacés en même temps que le compte**. Pendant la
+  bêta, la suppression se fait **sur demande par e-mail**, dans un délai d'un mois au plus ;
+  l'application ne propose pas encore de bouton de suppression automatique.
 - **Retrait du consentement** : à tout moment, avec le même effet qu'une demande
   d'effacement.
 - **Portabilité** : obtenir vos données dans un format lisible.
 - **Réclamation** : vous pouvez saisir la CNIL (www.cnil.fr) si vous estimez que vos droits
   ne sont pas respectés.
 
-Pour exercer un droit, écrivez à bonjour@aristocles.fr depuis l'adresse e-mail de votre
-compte, en précisant le prénom de l'enfant concerné.
+Pour exercer un droit, écrivez à bonjour@aristocles.fr depuis l'adresse
+e-mail de votre compte, en précisant le prénom de l'enfant concerné.
 
 ## 8. Pas de publicité, pas de pistage, pas de revente
 

@@ -16,7 +16,8 @@ permalink: /consentement/
 > tout moment** par e-mail : le compte et les données sont alors supprimés.
 >
 > Ce texte accompagne la [politique de confidentialité](/aristocles-site/confidentialite/),
-> qui détaille chaque point. Version 0.3, 14 septembre 2026 (ajout des journaux de la bêta).
+> qui détaille chaque point. Version 0.4, 15 septembre 2026 (les journaux de la bêta sont
+> désormais effacés immédiatement avec le compte).
 
 ---
 
@@ -50,8 +51,8 @@ choisissez.
 | Le **texte des échanges** avec Ari (ce que votre enfant a dit, transcrit ; ce qu'Ari a répondu), les exercices faits, les dictées, les synthèses de séance et vos bilans | Supabase, Paris ; le texte est transmis aux services d'IA (OpenAI pour le mode Devoirs et les indices ; OpenRouter/Anthropic pour le reste) pour qu'Ari réponde et pour rédiger les bilans | Tant que le compte existe |
 | Des **souvenirs pédagogiques** : les notions acquises ou fragiles, les mots de dictée qui posent problème | Supabase, Paris | Tant que le compte existe |
 | Des **mesures techniques** : durée et coût des appels d'IA (sans le texte), événements de séance (tours, écrans) | Supabase, Paris | Tant que le compte existe (événements de séance : 30 jours prévus) |
-| **Pendant la bêta**, des **événements d'usage** : ouverture de l'app, connexion (la méthode, jamais le mot de passe), saisie du PIN (réussie ou ratée, jamais le code), écrans consultés et temps passé, modes ouverts, erreurs techniques (type, écran, code, chemins du code — jamais le message brut ni le contenu des échanges) | Supabase, Paris ; lus par le fondateur seul | **90 jours**, effacés automatiquement (purge hebdomadaire) |
-| **Pendant la bêta**, une **copie complète de ce qui est envoyé à l'IA** à chaque réplique d'Ari : le contexte (prénom, classe, notion ou énoncé), tout l'échange du tour (ce que votre enfant a dit, ce qu'Ari a répondu), les noms des photos (jamais l'image) et la réponse brute du modèle — pour comprendre et corriger Ari | Supabase, Paris ; lue par le fondateur seul ; aucun envoi supplémentaire aux prestataires | **90 jours**, effacés automatiquement (purge hebdomadaire) ; journal retiré en fin de bêta |
+| **Pendant la bêta**, des **événements d'usage** : ouverture de l'app, connexion (la méthode, jamais le mot de passe), saisie du PIN (réussie ou ratée, jamais le code), écrans consultés et temps passé, modes ouverts, erreurs techniques (type, écran, code, chemins du code — jamais le message brut ni le contenu des échanges) | Supabase, Paris ; lus par le fondateur seul | **Effacés avec le compte** ; sinon 90 jours (purge hebdomadaire) |
+| **Pendant la bêta**, une **copie complète de ce qui est envoyé à l'IA** à chaque réplique d'Ari : le contexte (prénom, classe, notion ou énoncé), tout l'échange du tour (ce que votre enfant a dit, ce qu'Ari a répondu), les noms des photos (jamais l'image) et la réponse brute du modèle — pour comprendre et corriger Ari | Supabase, Paris ; lue par le fondateur seul ; aucun envoi supplémentaire aux prestataires | **Effacés avec le compte** ; sinon 90 jours (purge hebdomadaire) ; journal retiré en fin de bêta |
 
 Ce que l'application **ne fait pas** : pas de publicité, pas d'outil de mesure d'audience,
 pas de suivi publicitaire, pas de revente ni de cession de données, pas d'accès à votre
@@ -82,11 +83,12 @@ accès, et le premier sera retiré à la fin de la bêta.
 3. **De nous signaler** tout comportement d'Ari qui vous semble inapproprié, faux ou
    inquiétant, pour que nous corrigions.
 
-Vous pouvez **retirer votre accord à tout moment**, sans justification, en nous écrivant à
-bonjour@aristocles.fr depuis l'e-mail de votre compte. Nous supprimons alors le compte et
-toutes les données de votre enfant (profil, échanges, photos, souvenirs, bilans). Pendant la
-bêta, cette suppression est faite **à la main, sur demande, dans un délai d'un mois au plus** :
-l'application n'a pas encore de bouton « supprimer mon compte » qui agisse seul.
+Vous pouvez **retirer votre accord à tout moment**, sans justification, en nous écrivant
+à bonjour@aristocles.fr depuis l'e-mail de votre compte. Nous supprimons
+alors le compte et toutes les données de votre enfant (profil, échanges, photos, souvenirs,
+bilans). Pendant la bêta, cette suppression est faite **à la main, sur demande, dans un
+délai d'un mois au plus** : l'application n'a pas encore de bouton « supprimer mon compte »
+qui agisse seul.
 
 Vous pouvez aussi, à tout moment : consulter les données que nous détenons, corriger le
 prénom, le genre, les matières et les priorités de votre enfant directement dans l'espace
