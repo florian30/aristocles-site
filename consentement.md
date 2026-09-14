@@ -71,10 +71,11 @@ base et peut être relu directement pour diagnostiquer un problème que vous nou
 3. **De nous signaler** tout comportement d'Ari qui vous semble inapproprié, faux ou
    inquiétant, pour que nous corrigions.
 
-Vous pouvez **retirer votre accord à tout moment**, sans justification, en nous écrivant
-à bonjour@aristocles.fr depuis l'e-mail de votre compte. Nous supprimons alors le compte
-et toutes les données de votre enfant (profil, échanges, photos, souvenirs, bilans). Pendant la bêta, cette suppression est faite **à la main, sur demande** :
-l'application n'a pas encore de bouton « supprimer mon compte » qui agisse seul.
+Vous pouvez **retirer votre accord à tout moment**, sans justification, en nous écrivant à
+bonjour@aristocles.fr depuis l'e-mail de votre compte. Nous supprimons alors le compte et
+toutes les données de votre enfant (profil, échanges, photos, souvenirs, bilans). Pendant la
+bêta, cette suppression est faite **à la main, sur demande** : l'application n'a pas encore
+de bouton « supprimer mon compte » qui agisse seul.
 
 Vous pouvez aussi, à tout moment : consulter les données que nous détenons, corriger le
 prénom, le genre, les matières et les priorités de votre enfant directement dans l'espace
