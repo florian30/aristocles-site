@@ -14,7 +14,7 @@ permalink: /confidentialite/
 > des échanges est conservé tant que le compte existe. Vous pouvez demander la suppression
 > du compte et des données à tout moment en nous écrivant.
 >
-> Version 0.1 (bêta), datée du 14 septembre 2026.
+> Version 0.2 (bêta), datée du 14 septembre 2026.
 
 ---
 
@@ -203,8 +203,8 @@ Vous disposez, pour vous et pour votre enfant, des droits suivants :
   prioritaires se modifient directement dans l'espace parent (« Mon compte »). La classe et
   l'e-mail se modifient sur demande.
 - **Effacement** : faire supprimer le compte et toutes les données de l'enfant. Pendant la
-  bêta, la suppression se fait **sur demande par e-mail** ; l'application ne propose pas
-  encore de bouton de suppression automatique.
+  bêta, la suppression se fait **sur demande par e-mail**, dans un délai d'un mois au plus ;
+  l'application ne propose pas encore de bouton de suppression automatique.
 - **Retrait du consentement** : à tout moment, avec le même effet qu'une demande
   d'effacement.
 - **Portabilité** : obtenir vos données dans un format lisible.

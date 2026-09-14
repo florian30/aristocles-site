@@ -13,7 +13,7 @@ permalink: /consentement/
 > **retirer à tout moment** par e-mail : le compte et les données sont alors supprimés.
 >
 > Ce texte accompagne la [politique de confidentialité](/aristocles-site/confidentialite/),
-> qui détaille chaque point. Version 0.1, 14 septembre 2026.
+> qui détaille chaque point. Version 0.2, 14 septembre 2026.
 
 ---
 
@@ -74,8 +74,8 @@ base et peut être relu directement pour diagnostiquer un problème que vous nou
 Vous pouvez **retirer votre accord à tout moment**, sans justification, en nous écrivant à
 bonjour@aristocles.fr depuis l'e-mail de votre compte. Nous supprimons alors le compte et
 toutes les données de votre enfant (profil, échanges, photos, souvenirs, bilans). Pendant la
-bêta, cette suppression est faite **à la main, sur demande** : l'application n'a pas encore
-de bouton « supprimer mon compte » qui agisse seul.
+bêta, cette suppression est faite **à la main, sur demande, dans un délai d'un mois au plus** :
+l'application n'a pas encore de bouton « supprimer mon compte » qui agisse seul.
 
 Vous pouvez aussi, à tout moment : consulter les données que nous détenons, corriger le
 prénom, le genre, les matières et les priorités de votre enfant directement dans l'espace
