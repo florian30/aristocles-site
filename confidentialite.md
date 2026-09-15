@@ -288,7 +288,7 @@ Vous disposez, pour vous et pour votre enfant, des droits suivants :
       Votre mot de passe vous est demandé ; la suppression est **immédiate et
       irréversible**, fichiers compris (photos, audio).
     - **Par e-mail** : si votre application ne montre pas encore ce bouton, mettez-la à
-      jour ; si vous ne pouvez plus vous connecter, écrivez à `contact@aristocles.app`
+      jour ; si vous ne pouvez plus vous connecter, écrivez à contact@aristocles.app
       depuis l'adresse e-mail de votre compte : la suppression est alors faite à la main,
       dans un délai d'**un mois au plus**.
 - **Retrait du consentement** : à tout moment, avec le même effet qu'une demande

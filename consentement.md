@@ -96,7 +96,7 @@ d'usage, copie des échanges avec l'IA). Deux voies :
   mot de passe vous est demandé ; la suppression est **immédiate et irréversible**, fichiers
   compris (photos, audio).
 - **Par e-mail** : si votre application ne montre pas encore ce bouton, mettez-la à jour ;
-  si vous ne pouvez plus vous connecter, écrivez à `contact@aristocles.app` depuis l'e-mail
+  si vous ne pouvez plus vous connecter, écrivez à contact@aristocles.app depuis l'e-mail
   de votre compte : la suppression est alors faite à la main, dans un délai d'**un mois au
   plus**.
 
