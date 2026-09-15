@@ -13,11 +13,14 @@ permalink: /consentement/
 > et les erreurs techniques** (sans le contenu des échanges) et garde une **copie complète des
 > échanges avec le tuteur envoyés à l'IA** pour comprendre et corriger Ari : 90 jours au plus,
 > lue par le fondateur seul. Nous vous demandons un **accord explicite**, que vous pouvez **retirer à
-> tout moment** par e-mail : le compte et les données sont alors supprimés.
+> tout moment depuis l'application** (Espace parent › Mon compte › Supprimer mon compte) :
+> le compte et toutes les données sont alors supprimés, **immédiatement et
+> irréversiblement**, fichiers compris.
 >
 > Ce texte accompagne la [politique de confidentialité](/aristocles-site/confidentialite/),
-> qui détaille chaque point. Version 0.5, 15 septembre 2026 (les journaux de la bêta sont
-> désormais effacés immédiatement avec le compte).
+> qui détaille chaque point. Version 0.6, 15 septembre 2026 : la suppression du compte se
+> fait depuis l'application, immédiate, irréversible, fichiers compris (photos, audio des
+> dictées).
 
 ---
 
@@ -83,12 +86,19 @@ accès, et le premier sera retiré à la fin de la bêta.
 3. **De nous signaler** tout comportement d'Ari qui vous semble inapproprié, faux ou
    inquiétant, pour que nous corrigions.
 
-Vous pouvez **retirer votre accord à tout moment**, sans justification, en nous écrivant
-à contact@aristocles.app depuis l'e-mail de votre compte. Nous supprimons
-alors le compte et toutes les données de votre enfant (profil, échanges, photos, souvenirs,
-bilans). Pendant la bêta, cette suppression est faite **à la main, sur demande, dans un
-délai d'un mois au plus** : l'application n'a pas encore de bouton « supprimer mon compte »
-qui agisse seul.
+Vous pouvez **retirer votre accord à tout moment**, sans justification. Le compte et toutes
+les données de votre enfant sont alors supprimés : profil, séances et échanges avec Ari,
+exercices et dictées, bilans, souvenirs pédagogiques, photos de cahier et audios de dictée
+(**les fichiers compris**), et, pendant la bêta, les journaux de la bêta (événements
+d'usage, copie des échanges avec l'IA). Deux voies :
+
+- **Depuis l'application** : Espace parent › Mon compte › **Supprimer mon compte**. Votre
+  mot de passe vous est demandé ; la suppression est **immédiate et irréversible**, fichiers
+  compris (photos, audio).
+- **Par e-mail** : si votre application ne montre pas encore ce bouton, mettez-la à jour ;
+  si vous ne pouvez plus vous connecter, écrivez à contact@aristocles.app depuis l'e-mail
+  de votre compte : la suppression est alors faite à la main, dans un délai d'**un mois au
+  plus**.
 
 Vous pouvez aussi, à tout moment : consulter les données que nous détenons, corriger le
 prénom, le genre, les matières et les priorités de votre enfant directement dans l'espace

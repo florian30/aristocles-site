@@ -14,12 +14,18 @@ permalink: /confidentialite/
 > des échanges est conservé tant que le compte existe. **Pendant la bêta**, l'app enregistre
 > aussi les **écrans consultés et les erreurs techniques** (sans le contenu des échanges) et
 > garde une **copie complète des échanges avec le tuteur envoyés à l'IA**, pour comprendre et corriger Ari :
-> **90 jours au plus**, lue par le fondateur seul. Vous pouvez demander la suppression du
-> compte et des données à tout moment en nous écrivant.
+> **90 jours au plus**, lue par le fondateur seul. Vous pouvez supprimer le compte et toutes
+> les données à tout moment **depuis l'application** (Espace parent › Mon compte ›
+> Supprimer mon compte) : la suppression est **immédiate et irréversible**, fichiers compris.
 >
-> Version 0.5 (bêta), datée du 15 septembre 2026 — cette version corrige l'effacement des
-> journaux de la bêta (section 5, section 7) : ils sont désormais effacés **immédiatement**
-> avec le compte, en cascade, et non plus survivants jusqu'à la purge à 90 jours.
+> Version 0.6 (bêta), datée du 15 septembre 2026 — cette version acte que **la suppression
+> du compte se fait depuis l'application** (section 5, section 7) : Espace parent › Mon
+> compte › Supprimer mon compte, le mot de passe du compte est demandé, l'effacement est
+> **immédiat et irréversible** et emporte aussi les **fichiers** (photos du cahier, audio
+> des dictées). L'e-mail reste une voie de secours. La version 0.5 changeait l'adresse de
+> contact d'Aristocles pour contact@aristocles.app. La version 0.4 corrigeait l'effacement
+> des journaux de la bêta : ils sont effacés **immédiatement** avec le compte, en cascade,
+> et non plus survivants jusqu'à la purge à 90 jours.
 
 ---
 
@@ -248,15 +254,15 @@ sera précisé dans une prochaine version de cette politique.
 | Donnée | Durée | Comment |
 |---|---|---|
 | Enregistrement de la voix de l'enfant | **Zéro** : transmis pour transcription, jamais stocké | Pas d'écriture en base ni en stockage de fichiers |
-| Photos du cahier (énoncés, dictées) | **90 jours**, puis effacement | Purge automatique hebdomadaire (dimanche 4 h), active depuis le 9 septembre 2026 |
-| Texte des échanges, synthèses, exercices, dictées, bilans, conversations parent | **Tant que le compte existe** | Aucune purge automatique à ce jour ; effacement sur demande (section 7) |
-| Audio des dictées lues par Ari | **Tant que le compte existe** | Aucune purge automatique à ce jour |
-| Souvenirs pédagogiques (maîtrise, lexique, portrait) | **Tant que le compte existe** | Aucune purge automatique à ce jour |
+| Photos du cahier (énoncés, dictées) | **90 jours**, puis effacement | Purge automatique hebdomadaire (dimanche 4 h), active depuis le 9 septembre 2026. Les fichiers sont aussi effacés **immédiatement** avec le compte, par la suppression depuis l'app (section 7) |
+| Texte des échanges, synthèses, exercices, dictées, bilans, conversations parent | **Tant que le compte existe** | Aucune purge automatique à ce jour ; effacés **immédiatement** avec le compte, en cascade, par la suppression depuis l'app (section 7) |
+| Audio des dictées lues par Ari | **Tant que le compte existe** | Aucune purge automatique à ce jour ; ces **fichiers** sont effacés **immédiatement** avec le compte, par la suppression depuis l'app (section 7) |
+| Souvenirs pédagogiques (maîtrise, lexique, portrait) | **Tant que le compte existe** | Aucune purge automatique à ce jour ; effacés **immédiatement** avec le compte, en cascade (section 7) |
 | Journal des appels d'IA | **Tant que le compte existe** ; conservé sans identifiant d'enfant après suppression de l'enfant | Le lien vers l'enfant est effacé (`set null`), la ligne technique reste |
 | Événements de séance (tours, écrans) | **30 jours** prévus | La purge est écrite mais **pas encore activée** |
 | Événements d'usage (3.7, bêta) | **90 jours**, effacés automatiquement (purge hebdomadaire) | Effacés **immédiatement** avec le compte (suppression en cascade, depuis le 15 septembre 2026) ; sinon purge hebdomadaire le dimanche à 4 h, active depuis le 14 septembre 2026, jamais en dessous de 30 jours. |
 | Journal complet des échanges avec l'IA (3.8, bêta) | **90 jours**, effacés automatiquement (purge hebdomadaire) | Effacés **immédiatement** avec le compte (suppression en cascade, depuis le 15 septembre 2026) ; sinon purge hebdomadaire le dimanche à 4 h, active depuis le 14 septembre 2026, jamais en dessous de 30 jours. |
-| Compte parent, PIN, profil enfant | **Tant que le compte existe** | La suppression du compte entraîne, en cascade, celle du profil, des séances, des échanges, des souvenirs et des bilans |
+| Compte parent, PIN, profil enfant | **Tant que le compte existe** | La suppression du compte entraîne, en cascade, celle du profil, des séances, des échanges, des souvenirs et des bilans. Les **fichiers** (photos du cahier, audio des dictées) sont effacés **avant** le compte par la fonction de suppression : rien ne survit au stockage (section 7) |
 
 ## 6. Mineurs et consentement
 
@@ -276,9 +282,15 @@ Vous disposez, pour vous et pour votre enfant, des droits suivants :
   prioritaires se modifient directement dans l'espace parent (« Mon compte »). La classe et
   l'e-mail se modifient sur demande.
 - **Effacement** : faire supprimer le compte et toutes les données de l'enfant, **y compris
-  les journaux de la bêta (3.7 et 3.8), effacés en même temps que le compte**. Pendant la
-  bêta, la suppression se fait **sur demande par e-mail**, dans un délai d'un mois au plus ;
-  l'application ne propose pas encore de bouton de suppression automatique.
+  les journaux de la bêta (3.7 et 3.8) et les fichiers (photos du cahier, audio des
+  dictées), effacés en même temps que le compte**. Deux voies :
+    - **Depuis l'application** : Espace parent › Mon compte › **Supprimer mon compte**.
+      Votre mot de passe vous est demandé ; la suppression est **immédiate et
+      irréversible**, fichiers compris (photos, audio).
+    - **Par e-mail** : si votre application ne montre pas encore ce bouton, mettez-la à
+      jour ; si vous ne pouvez plus vous connecter, écrivez à contact@aristocles.app
+      depuis l'adresse e-mail de votre compte : la suppression est alors faite à la main,
+      dans un délai d'**un mois au plus**.
 - **Retrait du consentement** : à tout moment, avec le même effet qu'une demande
   d'effacement.
 - **Portabilité** : obtenir vos données dans un format lisible.

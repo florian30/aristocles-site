@@ -1,17 +1,20 @@
 ---
 layout: page
-title: "Supprimer mon compte et mes données — Aristocles"
+title: "Comment supprimer votre compte — Aristocles"
 permalink: /suppression/
 ---
 
-Vous pouvez demander à tout moment la suppression de votre compte et de toutes les données
-qui y sont rattachées.
+Vous pouvez supprimer votre compte et toutes les données qui y sont rattachées à tout
+moment, vous-même, depuis l'application.
 
-## Comment demander la suppression
+## Depuis l'application
 
-Écrivez à **[contact@aristocles.app](mailto:contact@aristocles.app)**, depuis l'adresse
-e-mail de votre compte, en indiquant que vous demandez la suppression de votre compte et de
-vos données. Aucun autre justificatif n'est demandé.
+Ouvrez **Espace parent › Mon compte › Supprimer mon compte**.
+
+Votre **mot de passe** vous est demandé, pour vérifier que c'est bien vous. La suppression
+est ensuite **immédiate et irréversible** : elle emporte aussi les **fichiers** (photos du
+cahier, audios de dictée). Il n'y a pas de délai de réflexion, pas de corbeille, pas de
+retour en arrière — une fois confirmée, rien ne peut être restauré.
 
 ## Ce qui est supprimé
 
@@ -23,18 +26,19 @@ La suppression efface, en même temps que le compte :
 - les exercices et les dictées ;
 - les bilans ;
 - les souvenirs pédagogiques ;
-- les photos de cahier ;
+- les photos de cahier et les audios de dictée, **fichiers compris** ;
 - pendant la bêta, les journaux de la bêta (événements d'usage et copie des échanges avec
   l'IA).
 
-## Délai
+## Par e-mail
 
-La suppression est faite dans un délai d'**un mois au plus** après votre demande.
+Si votre application ne montre pas encore ce bouton, mettez-la à jour ; si vous ne pouvez
+plus vous connecter, écrivez à **[contact@aristocles.app](mailto:contact@aristocles.app)**
+depuis l'adresse e-mail de votre compte, en indiquant que vous demandez la suppression de
+votre compte et de vos données. Aucun autre justificatif n'est demandé.
 
-## Pendant la bêta
-
-Pendant la phase bêta, la suppression est effectuée **à la main** par l'équipe : l'application
-ne propose pas encore de bouton de suppression automatique.
+La suppression est alors faite à la main, dans un délai d'**un mois au plus** après votre
+demande. Ce qui est effacé est exactement la même chose que ci-dessus.
 
 ---
 
