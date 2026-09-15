@@ -17,7 +17,7 @@ permalink: /confidentialite/
 > **90 jours au plus**, lue par le fondateur seul. Vous pouvez demander la suppression du
 > compte et des données à tout moment en nous écrivant.
 >
-> Version 0.4 (bêta), datée du 15 septembre 2026 — cette version corrige l'effacement des
+> Version 0.5 (bêta), datée du 15 septembre 2026 — cette version corrige l'effacement des
 > journaux de la bêta (section 5, section 7) : ils sont désormais effacés **immédiatement**
 > avec le compte, en cascade, et non plus survivants jusqu'à la purge à 90 jours.
 
@@ -26,7 +26,7 @@ permalink: /confidentialite/
 ## 1. Qui est responsable de vos données
 
 Aristocles est édité, en phase bêta, par son fondateur. Contact pour toute question ou
-demande sur vos données : bonjour@aristocles.fr. Les coordonnées complètes de l'éditeur
+demande sur vos données : contact@aristocles.app. Les coordonnées complètes de l'éditeur
 seront ajoutées avant l'ouverture publique.
 
 C'est à cette adresse que vous pouvez exercer vos droits (section 7) et poser vos questions.
@@ -285,7 +285,7 @@ Vous disposez, pour vous et pour votre enfant, des droits suivants :
 - **Réclamation** : vous pouvez saisir la CNIL (www.cnil.fr) si vous estimez que vos droits
   ne sont pas respectés.
 
-Pour exercer un droit, écrivez à bonjour@aristocles.fr depuis l'adresse
+Pour exercer un droit, écrivez à contact@aristocles.app depuis l'adresse
 e-mail de votre compte, en précisant le prénom de l'enfant concerné.
 
 ## 8. Pas de publicité, pas de pistage, pas de revente

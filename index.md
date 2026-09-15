@@ -21,4 +21,4 @@ familles.
 
 ## Contact
 
-Pour toute question ou demande concernant vos données : [bonjour@aristocles.fr](mailto:bonjour@aristocles.fr)
+Pour toute question ou demande concernant vos données : [contact@aristocles.app](mailto:contact@aristocles.app)

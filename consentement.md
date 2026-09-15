@@ -16,7 +16,7 @@ permalink: /consentement/
 > tout moment** par e-mail : le compte et les données sont alors supprimés.
 >
 > Ce texte accompagne la [politique de confidentialité](/aristocles-site/confidentialite/),
-> qui détaille chaque point. Version 0.4, 15 septembre 2026 (les journaux de la bêta sont
+> qui détaille chaque point. Version 0.5, 15 septembre 2026 (les journaux de la bêta sont
 > désormais effacés immédiatement avec le compte).
 
 ---
@@ -84,7 +84,7 @@ accès, et le premier sera retiré à la fin de la bêta.
    inquiétant, pour que nous corrigions.
 
 Vous pouvez **retirer votre accord à tout moment**, sans justification, en nous écrivant
-à bonjour@aristocles.fr depuis l'e-mail de votre compte. Nous supprimons
+à contact@aristocles.app depuis l'e-mail de votre compte. Nous supprimons
 alors le compte et toutes les données de votre enfant (profil, échanges, photos, souvenirs,
 bilans). Pendant la bêta, cette suppression est faite **à la main, sur demande, dans un
 délai d'un mois au plus** : l'application n'a pas encore de bouton « supprimer mon compte »
