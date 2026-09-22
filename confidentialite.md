@@ -18,8 +18,23 @@ permalink: /confidentialite/
 > les données à tout moment **depuis l'application** (Espace parent › Mon compte ›
 > Supprimer mon compte) : la suppression est **immédiate et irréversible**, fichiers compris.
 >
-> Version 0.6 (bêta), datée du 15 septembre 2026 — cette version acte que **la suppression
-> du compte se fait depuis l'application** (section 5, section 7) : Espace parent › Mon
+> Version 0.7 (bêta), datée du 22 septembre 2026 — cette version acte deux choses, qui ne
+> s'appliquent pas au même moment. **Dès maintenant**, quelle que soit la version de
+> l'application installée : depuis le 16 septembre 2026, le **tableau de bord de suivi** de
+> la bêta s'ouvre avec le compte personnel du fondateur, et il lui montre **tout** ce que la
+> bêta recueille, y compris le mot à mot des échanges de l'enfant avec Ari, la copie complète
+> des échanges avec l'IA, les événements d'usage, l'e-mail du parent et les photos du cahier
+> (section 10) ; le fondateur en est le seul lecteur. **À partir de la prochaine version de
+> l'application**, et seulement une fois qu'elle est installée : Ari ne demande plus à
+> l'enfant son école ni le prénom de son enseignant ; ses deux réponses de la première
+> rencontre (ce qu'il aime faire en dehors de l'école, ce qu'il préfère à l'école) sont
+> enregistrées et transmises au tuteur, avec son prénom et sa classe, en mode Apprentissage ;
+> Ari réagit à chaque réponse de la rencontre par un appel à l'IA qui reçoit le genre de
+> l'enfant, sans son prénom ni sa classe (sections 3.2 et 3.5) ; en mode Devoirs, quelques
+> mots de l'énoncé accompagnent la voix envoyée à la transcription (section 3.3), **sans
+> nouveau prestataire**. Une application qui n'est pas mise à jour continue de fonctionner
+> comme avant. La version 0.6 actait que **la suppression du compte se fait depuis
+> l'application** (section 5, section 7) : Espace parent › Mon
 > compte › Supprimer mon compte, le mot de passe du compte est demandé, l'effacement est
 > **immédiat et irréversible** et emporte aussi les **fichiers** (photos du cahier, audio
 > des dictées). L'e-mail reste une voie de secours. La version 0.5 changeait l'adresse de
@@ -68,15 +83,51 @@ adresse postale, aucun numéro de téléphone du parent n'est demandé.
 | Donnée | Pourquoi | Obligatoire ? |
 |---|---|---|
 | Prénom | Pour qu'Ari s'adresse à l'enfant par son prénom | Oui |
-| Genre (fille / garçon / autre / non précisé) | Pour accorder correctement les phrases d'Ari | Oui |
+| Genre (fille / garçon / autre / non précisé) | Pour accorder correctement les phrases d'Ari. À partir de la prochaine version de l'application : pour accorder la phrase qu'Ari improvise en réaction à chaque réponse de la première rencontre (ci-dessous) | Oui |
 | Classe (CE1, CE2, CM1 ou CM2) | Pour adapter le niveau des exercices et du langage | Oui |
-| École | Contexte, posé à l'enfant par Ari lors de la première rencontre | Non |
-| Prénom du maître ou de la maîtresse | Contexte, posé à l'enfant lors de la première rencontre | Non |
+| École | Posée à l'enfant par Ari lors de la première rencontre. **Question retirée à partir de la prochaine version de l'application** ; les réponses déjà données sont conservées (voir ci-dessous) | Non |
+| Prénom du maître ou de la maîtresse | Posée à l'enfant lors de la première rencontre. **Question retirée à partir de la prochaine version de l'application** ; les réponses déjà données sont conservées (voir ci-dessous) | Non |
 | Matières actives, notions à travailler en priorité | Réglages choisis par le parent | Non |
+| Ce que l'enfant aime faire en dehors de l'école, ce qu'il préfère à l'école | À partir de la prochaine version de l'application : ses réponses à Ari lors de la première rencontre, pour qu'Ari sache un peu à qui il parle | Non |
 
-Nous ne demandons **ni date de naissance, ni photo, ni adresse de l'enfant**. Ce que
-l'enfant dit aimer faire en dehors de l'école (ses activités) lui est demandé lors de la
-première rencontre, mais **n'est pas enregistré** à ce jour.
+Nous ne demandons **ni date de naissance, ni photo, ni adresse de l'enfant**.
+
+**La première rencontre change avec la prochaine version de l'application.** Les deux
+paragraphes qui suivent ne s'appliquent qu'une fois cette version installée. Tant qu'elle
+ne l'est pas, rien ne change : Ari pose les questions d'avant (dont l'école et le prénom de
+l'enseignant), ce que l'enfant dit aimer faire en dehors de l'école **n'est pas enregistré**,
+et aucun appel à l'IA n'est fait pendant la rencontre.
+
+Lors de la première rencontre, Ari demande à l'enfant ce qu'il aime faire en dehors de
+l'école et ce qu'il préfère à l'école. **Ses deux réponses sont enregistrées telles
+quelles**, sans correction : ce sont des réponses libres, qui peuvent contenir un nom s'il
+en dit un (le sien, celui d'un camarade, d'un lieu). Une seule exception : quand l'IA qui
+réagit pendant la rencontre (ci-dessous) a vu dans ce que l'enfant a dit non pas une
+réponse mais une question à Ari, un jeu ou un propos qui n'a pas sa place, **rien n'est
+enregistré pour cette question** ; l'enfant peut répondre à nouveau avec le bouton « Ce
+n'est pas ça ». Si l'IA n'a pas répondu à temps, la réponse est enregistrée telle quelle.
+Les réponses enregistrées sont ensuite **transmises au tuteur à chaque échange du mode
+Apprentissage** (3.5), chacune coupée à 120 caractères.
+
+**Pendant la rencontre, Ari réagit à chaque réponse.** Chaque réponse de l'enfant (le
+« bonjour » d'échauffement compris, qui n'est pas enregistré) est **envoyée une fois à un
+modèle d'IA** (via OpenRouter, puis Anthropic Claude, aux États-Unis), avec la question
+qu'Ari venait de poser, pour qu'Ari y réponde d'**une phrase**. Le modèle dit aussi ce qu'il
+a vu dans la réponse (une réponse, une question à Ari, un jeu, un propos qui n'a pas sa
+place) ; c'est l'application, pas le modèle, qui décide de reposer la question (une fois au
+plus) ou de passer. Si l'enfant a corrigé sa réponse avec le bouton « Ce n'est pas ça »,
+l'ancienne et la nouvelle partent ensemble. **Cet envoi contient le genre de l'enfant**, pour que les mots d'Ari
+soient accordés — et pour cela seulement : le modèle a pour consigne de ne pas choisir ce
+qu'il dit selon le genre. **Il ne contient ni le prénom ni la classe.** Si le modèle ne
+répond pas à temps, Ari dit une phrase toute faite. Cet appel est compté dans le journal des
+appels d'IA (3.7, sans le texte) et, pendant la bêta, copié dans le journal complet (3.8).
+
+Jusqu'à cette version, Ari demande aussi à l'enfant **le nom de son école** et **le prénom
+de son maître ou de sa maîtresse**. **Avec la prochaine version, ces deux questions ne sont
+plus posées** : l'école permet de situer un mineur, et le prénom de l'enseignant concerne un
+adulte qui n'a rien accepté. Les réponses déjà données **ne sont pas effacées** : elles
+restent sur le profil de l'enfant, et une application mise à jour n'en ajoute plus aucune.
+Vous pouvez en demander l'effacement (section 7), et elles disparaissent avec le compte.
 
 ### 3.3 La voix de l'enfant
 
@@ -89,6 +140,13 @@ pendant qu'il est enfoncé. L'enregistrement est envoyé à notre serveur, qui l
 - **Le texte obtenu est conservé** dans l'historique de la séance (voir 3.5).
 - Nos journaux techniques ne gardent que la durée de l'enregistrement et sa taille, jamais
   son contenu ni sa transcription.
+- Pour aider la transcription, l'enregistrement part avec une **courte amorce de texte** :
+  quelques phrases fixes qui présentent Ari et, dans un exercice oral, une vingtaine de mots
+  au plus tirés de l'exercice (des mots du programme, pas des données de l'enfant). **À
+  partir de la prochaine version de l'application**, en mode Devoirs, cette amorce porte aussi une vingtaine de mots au plus de l'**énoncé**
+  affiché — en général le texte lu sur la photo du cahier (3.4), où se trouvent par exemple
+  des noms propres. **Aucun nouveau prestataire** : OpenAI reçoit déjà ces photos en mode
+  Devoirs (section 4). Nos journaux ne gardent que le nombre de ces mots, jamais les mots.
 
 À l'inverse, la voix d'Ari est **fabriquée** à partir de son texte par **OpenAI (synthèse
 vocale)**. Le fichier audio produit n'est pas stocké sur nos serveurs ; il est mis en cache
@@ -126,9 +184,14 @@ mots cibles, écarts constatés, et l'enregistrement audio de la dictée lue par
 devoirs datés, le « pouce » que l'enfant donne à la fin d'un écran, et les conversations
 entre **vous** et Ari dans l'espace parent.
 
-Chaque appel à un modèle d'IA reçoit le **prénom** et la **classe** de l'enfant, ainsi que
-les consignes du devoir en cours : c'est ce qui permet à Ari de parler à l'enfant et non à un
-inconnu.
+En mode Devoirs, pour les synthèses et pour les bilans, chaque appel à un modèle d'IA reçoit
+le **prénom** et la **classe** de l'enfant, ainsi que les consignes du devoir en cours : c'est
+ce qui permet à Ari de parler à l'enfant et non à un inconnu. La transcription de la voix et
+la synthèse vocale (3.3) ne les reçoivent pas. **En mode Apprentissage**, le tuteur ne reçoit
+aujourd'hui ni le prénom ni la classe ; **à partir de la prochaine version de
+l'application**, il les reçoit à chaque échange, avec, quand l'enfant les a données, **ses
+deux réponses de la première rencontre** (3.2), chacune coupée à 120 caractères. Le mode
+Devoirs ne reçoit pas ces deux réponses.
 
 ### 3.6 Les souvenirs pédagogiques
 
@@ -142,13 +205,15 @@ Pour qu'Ari s'améliore d'une séance à l'autre, nous conservons par enfant :
   désactivée à ce jour** : le portrait reste vide tant qu'elle ne l'est pas.
 
 Ces souvenirs ne sont **pas** injectés dans les conversations d'Ari avec l'enfant ; ils
-servent aux bilans et à la conversation parent.
+servent aux bilans et à la conversation parent. Les deux réponses de la première rencontre
+(3.2) n'en font pas partie : elles **sont** transmises au tuteur en mode Apprentissage, à
+partir de la prochaine version de l'application.
 
 ### 3.7 Les données techniques
 
 | Donnée | Ce qu'elle contient | Ce qu'elle ne contient jamais |
 |---|---|---|
-| Journal des appels d'IA | Rôle (tuteur, lecture de photo…), modèle utilisé, durée, nombre de jetons, coût estimé, succès ou échec, identifiant de l'enfant, identifiants de séance et d'écran | Le texte envoyé, le texte reçu, le prénom (pendant la bêta, une copie complète des échanges vit dans un journal **à part**, décrit en 3.8) |
+| Journal des appels d'IA | Rôle (tuteur, lecture de photo, réaction de la rencontre…), modèle utilisé, durée, nombre de jetons, coût estimé, succès ou échec, identifiant de l'enfant, identifiants de séance et d'écran ; pour la réaction de la rencontre (à partir de la prochaine version de l'application) : le genre de l'enfant et ce que le modèle a vu dans la réponse, sans le texte | Le texte envoyé, le texte reçu, le prénom (pendant la bêta, une copie complète des échanges vit dans un journal **à part**, décrit en 3.8) |
 | Événements de séance | Type d'événement (début de tour, fin d'écran…), numéro de tour, écran concerné, horodatage | Le contenu des échanges |
 | Événements d'usage (bêta) | Ce qui se passe **autour** des séances : liste ci-dessous | Le mot de passe, le code PIN, le contenu des échanges, le prénom, l'e-mail |
 | Journal de purge | Nombre de photos candidates, supprimées, en échec, à chaque passage | Les chemins des fichiers, l'identifiant de l'enfant |
@@ -193,10 +258,15 @@ est conservé par la bibliothèque Supabase.
 
 Pendant la bêta, et seulement pendant la bêta, nous gardons pour **chaque réplique d'Ari** une
 copie exacte de ce que le modèle d'IA a reçu et de ce qu'il a rendu. C'est un journal **à
-part**, distinct de l'historique de séance (3.5) et du journal des appels d'IA (3.7).
+part**, distinct de l'historique de séance (3.5) et du journal des appels d'IA (3.7). À
+partir de la prochaine version de l'application, il couvre aussi les **réactions d'Ari
+pendant la première rencontre** (3.2) : la question posée, la ou les réponses de l'enfant,
+son genre, et ce que le modèle a rendu — sans prénom ni classe, que le modèle ne reçoit pas.
 
 **Ce qu'il contient.** Côté requête : le contexte de séance envoyé au modèle (dont le
-**prénom** et la **classe** de l'enfant, la notion travaillée ou l'énoncé du devoir),
+**prénom** et la **classe** de l'enfant — en mode Apprentissage, à partir de la prochaine
+version de l'application, avec ses deux réponses de la première rencontre —, la notion
+travaillée ou l'énoncé du devoir),
 l'**historique complet du tour** (ce que l'enfant a dit, transcrit mot à mot ; ce qu'Ari a
 répondu), la description du visuel affiché à l'écran, les **chemins** des photos du cahier
 (le nom du fichier, jamais l'image), les noms des outils mis à disposition du modèle et les
@@ -214,9 +284,9 @@ le texte, ne permet pas ce travail.
 Supabase à Paris, de ce qui est déjà transmis à nos prestataires pour faire fonctionner Ari
 (section 4). Aucune photo n'y est stockée.
 
-**Qui le lit.** Le **fondateur, seul**, directement dans la base de données. Ni l'application,
-ni le tableau de bord de suivi (section 10) n'y ont accès : la base refuse toute lecture autre
-que celle du serveur.
+**Qui le lit.** Le **fondateur, seul** : directement dans la base de données, ou par le
+tableau de bord de suivi (section 10), qui ne s'ouvre qu'avec son compte personnel.
+L'application n'y a pas accès : la base refuse toute lecture autre que celle du serveur.
 
 **Combien de temps.** 90 jours au plus (section 5).
 
@@ -231,8 +301,8 @@ techniques, qui traitent les données **pour notre compte** et selon nos instruc
 | Prestataire | Pays | Ce qu'il reçoit | Ce qu'il ne reçoit pas |
 |---|---|---|---|
 | **Supabase** (base de données, authentification, stockage de fichiers, fonctions serveur) | **France (Paris)** | Tout ce qui est décrit à la section 3 | — |
-| **OpenAI** | **États-Unis (hors UE)** | La voix de l'enfant (transcription) ; le texte d'Ari (synthèse vocale) ; en mode Devoirs et pour les indices d'exercice : les échanges texte, les photos et le prénom de l'enfant | L'e-mail du parent, le PIN |
-| **OpenRouter** (intermédiaire) puis **Anthropic** (modèles Claude) | **États-Unis (hors UE)** | Les échanges texte en mode Apprentissage, les photos du cahier, le prénom et la classe, les synthèses de séance, les bilans, les conversations parent | L'e-mail du parent, le PIN, la voix |
+| **OpenAI** | **États-Unis (hors UE)** | La voix de l'enfant (transcription, avec une courte amorce de texte : 3.3) ; le texte d'Ari (synthèse vocale) ; en mode Devoirs et pour les indices d'exercice : les échanges texte, les photos et le prénom de l'enfant | L'e-mail du parent, le PIN |
+| **OpenRouter** (intermédiaire) puis **Anthropic** (modèles Claude) | **États-Unis (hors UE)** | Les échanges texte en mode Apprentissage, les photos du cahier, le prénom et la classe, les synthèses de séance, les bilans, les conversations parent ; à partir de la prochaine version de l'application : en mode Apprentissage, les deux réponses de l'enfant à la première rencontre, et, pendant la rencontre elle-même, chaque réponse avec la question posée et le genre de l'enfant (sans prénom ni classe) | L'e-mail du parent, le PIN, la voix |
 
 Précisions :
 
@@ -320,22 +390,38 @@ e-mail de votre compte, en précisant le prénom de l'enfant concerné.
 - Les journaux techniques (3.7) ne contiennent **jamais** le contenu des échanges ni la voix.
   La seule copie complète des échanges hors historique de séance est le journal de la bêta
   (3.8) : lisible par le fondateur seul, jamais la voix, jamais les photos.
+- Le tableau de bord de suivi (section 10) ne s'ouvre qu'avec le **compte personnel du
+  fondateur** : le serveur vérifie la connexion et refuse tout autre compte. Il ne fait que
+  lire, et ne montre jamais le code PIN parent.
 - Les mots de passe sont gérés par Supabase Auth. La longueur minimale est de 6 caractères.
 
 ## 10. Phase bêta : ce que l'équipe peut voir
 
-Aristocles est en version bêta. Pour améliorer le tuteur, l'équipe dispose d'un **tableau
-de bord de suivi des testeurs**, protégé par mot de passe, qui montre par enfant : le
-prénom, les séances, les exercices résolus, les **synthèses rédigées** de chaque écran, le
-résumé de séance, les coûts et durées des appels d'IA, et les événements de séance. Ce
-tableau de bord **ne montre jamais le verbatim** des échanges entre l'enfant et Ari, et ne
-lit ni les événements d'usage ni le journal complet des échanges avec l'IA.
+Aristocles est en version bêta, testée par un cercle fermé de familles. Pour suivre cette
+bêta et améliorer le tuteur, le fondateur dispose d'un **tableau de bord de suivi des
+testeurs**. Depuis le 16 septembre 2026, on n'y entre plus par un mot de passe partagé :
+il ne s'ouvre qu'avec le **compte personnel du fondateur**, qui en est le **seul lecteur**.
 
-Les échanges bruts (historique de séance, 3.5), les événements d'usage (3.7) et le journal
-complet des échanges avec l'IA (3.8) restent en base et sont consultés directement, dans la
-base de données, par le **fondateur seul** : pour diagnostiquer un problème signalé par une
-famille, et pour relire les tours d'Ari afin d'améliorer ses consignes. Personne d'autre n'a
-cet accès pendant la bêta. Les journaux propres à la bêta (3.7 événements d'usage, 3.8) sont
+Ce tableau de bord montre **tout ce que la bêta recueille**, famille par famille et enfant
+par enfant :
+
+- le prénom, la classe et le genre de l'enfant, et l'**adresse e-mail du parent** ;
+- les séances, les exercices et leur issue, les dictées, les devoirs, les synthèses rédigées
+  de chaque écran, les résumés de séance et les souvenirs pédagogiques (3.6) ;
+- vos **conversations avec Ari** dans l'espace parent ;
+- le **mot à mot des échanges** entre l'enfant et Ari (3.5) : ce que l'enfant a dit,
+  transcrit, et ce qu'Ari a répondu ;
+- la **copie complète des échanges avec l'IA** (3.8) ;
+- les **événements d'usage** (3.7) et les événements de séance, les coûts et durées des
+  appels d'IA ;
+- les **photos du cahier**, qu'il peut ouvrir par un lien valable cinq minutes, tant
+  qu'elles n'ont pas été effacées (90 jours au plus, section 5).
+
+Il ne montre jamais le code PIN parent, et il ne fait que lire : il ne modifie aucune donnée.
+
+Le fondateur s'en sert pour **diagnostiquer un problème** signalé par une famille, et pour
+**relire les tours d'Ari** afin d'améliorer ses consignes. Il peut aussi consulter ces
+données directement dans la base. Personne d'autre n'a cet accès pendant la bêta. Les journaux propres à la bêta (3.7 événements d'usage, 3.8) sont
 gardés 90 jours au plus ; le journal 3.8 sera retiré à la fin de la bêta.
 
 ## 11. Modifications de cette politique
