@@ -427,5 +427,5 @@ gardés 90 jours au plus ; le journal 3.8 sera retiré à la fin de la bêta.
 ## 11. Modifications de cette politique
 
 Cette politique sera mise à jour à chaque évolution du traitement (nouveau prestataire,
-nouvelle durée de conservation, ouverture au public). La version et la date figurent en tête.
-Les familles bêta seront prévenues par e-mail en cas de changement important.
+nouvelle durée de conservation, ouverture au public). La version en vigueur est celle
+publiée sur le site d'Aristocles ; sa version et sa date figurent en tête.
