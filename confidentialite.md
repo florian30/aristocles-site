@@ -18,7 +18,17 @@ permalink: /confidentialite/
 > les données à tout moment **depuis l'application** (Espace parent › Mon compte ›
 > Supprimer mon compte) : la suppression est **immédiate et irréversible**, fichiers compris.
 >
-> Version 0.7 (bêta), datée du 22 septembre 2026 — cette version acte deux choses, qui ne
+> Version 0.8 (bêta), datée du 1er octobre 2026 — cette version précise le sort des
+> **photos de la copie de dictée** et des **listes de mots** de la nouvelle Dictée. Les photos
+> de la copie sont rangées dans un espace privé, que **vous** (pour votre enfant) et
+> **l'équipe** (le fondateur, section 10) pouvez ouvrir, et personne d'autre ; elles sont
+> **effacées automatiquement au bout de 90 jours**, et **toutes effacées à la fin de la
+> bêta**. Le texte et l'audio de la dictée sont gardés tant que le compte existe, et effacés
+> avec lui. Les listes de mots que vous avez confirmées sont gardées tant que le compte
+> existe ; une liste commencée mais jamais confirmée est effacée au bout de
+> 7 jours (section 5). Rien d'autre ne change.
+>
+> La version 0.7 (22 septembre 2026) actait deux choses, qui ne
 > s'appliquent pas au même moment. **Dès maintenant**, quelle que soit la version de
 > l'application installée : depuis le 16 septembre 2026, le **tableau de bord de suivi** de
 > la bêta s'ouvre avec le compte personnel du fondateur, et il lui montre **tout** ce que la
@@ -159,11 +169,18 @@ photo est stockée dans un espace privé de Supabase, rangé par enfant, et lue 
 d'IA (via OpenRouter, puis Anthropic Claude ; en mode Devoirs, également OpenAI) qui en
 extrait le texte : consignes à faire, ou mots écrits par l'enfant.
 
-- Le stockage est **privé** : seul le parent connecté peut relire les photos de son enfant.
-  Limite : 5 Mo par photo, formats JPEG, PNG et HEIC.
+- Le stockage est **privé** : seul le parent connecté peut relire les photos de son enfant
+  (en plus de l'équipe, pendant la bêta : section 10). Limite : 5 Mo par photo, formats
+  JPEG, PNG et HEIC.
 - **Les photos sont effacées automatiquement au bout de 90 jours** (purge hebdomadaire,
   le dimanche à 4 h du matin). Le fait qu'une photo a été prise (date, écran) reste dans
   l'historique, sans l'image.
+- **Photo de la copie de dictée** : elle suit le même régime que les autres photos. Elle est
+  gardée pendant la bêta pour que l'équipe puisse analyser et corriger la lecture de la
+  copie, dans cet espace privé, **effacée d'elle-même au bout de 90 jours**, et **toutes les
+  photos de dictée seront effacées à la fin de la bêta**, sans attendre les 90 jours. Le
+  **texte** et l'**audio** de la dictée, eux, sont gardés avec la dictée tant que le compte
+  existe (section 5).
 - Le **texte extrait** de la photo est conservé dans l'historique de la séance.
 - L'application n'accède **pas** à la galerie de photos du téléphone : seulement à l'appareil
   photo, au moment de la prise de vue.
@@ -324,8 +341,10 @@ sera précisé dans une prochaine version de cette politique.
 | Donnée | Durée | Comment |
 |---|---|---|
 | Enregistrement de la voix de l'enfant | **Zéro** : transmis pour transcription, jamais stocké | Pas d'écriture en base ni en stockage de fichiers |
-| Photos du cahier (énoncés, dictées) | **90 jours**, puis effacement | Purge automatique hebdomadaire (dimanche 4 h), active depuis le 9 septembre 2026. Les fichiers sont aussi effacés **immédiatement** avec le compte, par la suppression depuis l'app (section 7) |
+| Photos du cahier (énoncés, copies de dictée) | **90 jours**, puis effacement | Purge automatique hebdomadaire (dimanche 4 h), active depuis le 9 septembre 2026. Les fichiers sont aussi effacés **immédiatement** avec le compte, par la suppression depuis l'app (section 7). Les photos de copies de dictée sont de plus **toutes effacées à la fin de la bêta** |
 | Texte des échanges, synthèses, exercices, dictées, bilans, conversations parent | **Tant que le compte existe** | Aucune purge automatique à ce jour ; effacés **immédiatement** avec le compte, en cascade, par la suppression depuis l'app (section 7) |
+| Listes de mots confirmées (Dictée) | **Tant que le compte existe** | Effacées **immédiatement** avec le compte, en cascade (section 7) |
+| Listes de mots non confirmées (brouillons, Dictée) | **7 jours**, puis effacement | Une liste commencée mais jamais confirmée, et qu'aucune dictée n'utilise, est effacée au bout de 7 jours, jamais en dessous de 7 jours. Effacées **immédiatement** avec le compte, en cascade (section 7) |
 | Audio des dictées lues par Ari | **Tant que le compte existe** | Aucune purge automatique à ce jour ; ces **fichiers** sont effacés **immédiatement** avec le compte, par la suppression depuis l'app (section 7) |
 | Souvenirs pédagogiques (maîtrise, lexique, portrait) | **Tant que le compte existe** | Aucune purge automatique à ce jour ; effacés **immédiatement** avec le compte, en cascade (section 7) |
 | Journal des appels d'IA | **Tant que le compte existe** ; conservé sans identifiant d'enfant après suppression de l'enfant | Le lien vers l'enfant est effacé (`set null`), la ligne technique reste |
@@ -383,7 +402,7 @@ e-mail de votre compte, en précisant le prénom de l'enfant concerné.
 - Toutes les communications entre l'application et nos serveurs sont **chiffrées (HTTPS)** ;
   l'app refuse les connexions non chiffrées.
 - Les fichiers (photos, audio de dictée) sont dans des espaces **privés**, accessibles
-  uniquement au parent de l'enfant concerné.
+  uniquement au parent de l'enfant concerné (et, pendant la bêta, à l'équipe : section 10).
 - La base de données applique une **isolation par famille** : un parent ne peut lire que
   les données de ses propres enfants.
 - Le PIN parent est protégé par une empreinte **Argon2id** avec verrouillage après échecs.
@@ -415,7 +434,8 @@ par enfant :
 - les **événements d'usage** (3.7) et les événements de séance, les coûts et durées des
   appels d'IA ;
 - les **photos du cahier**, qu'il peut ouvrir par un lien valable cinq minutes, tant
-  qu'elles n'ont pas été effacées (90 jours au plus, section 5).
+  qu'elles n'ont pas été effacées (90 jours au plus, section 5), y compris les photos des
+  copies de dictée, qui seront toutes effacées à la fin de la bêta (3.4).
 
 Il ne montre jamais le code PIN parent, et il ne fait que lire : il ne modifie aucune donnée.
 
