@@ -86,7 +86,7 @@ TestFlight (iPhone) et par la piste de test interne de Google Play (Android).
 | Donnée | Pourquoi | Détail |
 |---|---|---|
 | Adresse e-mail | Vous identifier et vous permettre de vous connecter | Gérée par le service d'authentification de Supabase. |
-| Mot de passe | Protéger votre compte | Jamais stocké en clair (haché par Supabase Auth). Longueur minimale : 6 caractères. |
+| Mot de passe | Protéger votre compte | Jamais stocké en clair (haché par Supabase Auth). Longueur minimale : 8 caractères. |
 | Code PIN parent | Protéger l'espace parent (bilans, réglages) contre l'enfant | Quatre chiffres. Jamais stocké en clair : seule une empreinte (Argon2id, avec sel) est conservée. Jamais écrit dans les journaux. Verrouillage après plusieurs essais ratés. |
 | Date de consentement | Garder la preuve que vous avez accepté ce cadre | Horodatage posé par le serveur au moment où le PIN est créé. |
 | Compteur d'usage journalier | Plafonner le nombre d'appels aux services d'IA par famille et par jour | Un compteur, sans contenu. |
@@ -418,7 +418,7 @@ e-mail de votre compte, en précisant le prénom de l'enfant concerné.
 - Le tableau de bord de suivi (section 10) ne s'ouvre qu'avec le **compte personnel du
   fondateur** : le serveur vérifie la connexion et refuse tout autre compte. Il ne fait que
   lire, et ne montre jamais le code PIN parent.
-- Les mots de passe sont gérés par Supabase Auth. La longueur minimale est de 6 caractères.
+- Les mots de passe sont gérés par Supabase Auth. La longueur minimale est de 8 caractères.
 
 ## 10. Phase bêta : ce que l'équipe peut voir
 
