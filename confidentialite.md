@@ -18,7 +18,13 @@ permalink: /confidentialite/
 > les données à tout moment **depuis l'application** (Espace parent › Mon compte ›
 > Supprimer mon compte) : la suppression est **immédiate et irréversible**, fichiers compris.
 >
-> Version 0.8 (bêta), datée du 1er octobre 2026 — cette version précise le sort des
+> Version 0.9 (bêta), datée du 3 octobre 2026 — cette version fixe deux durées de
+> conservation (section 5). Le **journal des appels d'IA** (3.7, sans le texte des échanges),
+> jusqu'ici gardé sans limite, est désormais **effacé au bout de 12 mois**. Les **événements
+> de séance** (3.7), dont la purge était écrite mais pas activée, sont désormais **effacés au
+> bout de 90 jours**, comme les photos du cahier. Rien d'autre ne change.
+>
+> La version 0.8 (1er octobre 2026) précisait le sort des
 > **photos de la copie de dictée** et des **listes de mots** de la nouvelle Dictée. Les photos
 > de la copie sont rangées dans un espace privé, que **vous** (pour votre enfant) et
 > **l'équipe** (le fondateur, section 10) pouvez ouvrir, et personne d'autre ; elles sont
@@ -26,7 +32,7 @@ permalink: /confidentialite/
 > bêta**. Le texte et l'audio de la dictée sont gardés tant que le compte existe, et effacés
 > avec lui. Les listes de mots que vous avez confirmées sont gardées tant que le compte
 > existe ; une liste commencée mais jamais confirmée est effacée au bout de
-> 7 jours (section 5). Rien d'autre ne change.
+> 7 jours (section 5). Rien d'autre ne changeait.
 >
 > La version 0.7 (22 septembre 2026) actait deux choses, qui ne
 > s'appliquent pas au même moment. **Dès maintenant**, quelle que soit la version de
@@ -80,7 +86,7 @@ TestFlight (iPhone) et par la piste de test interne de Google Play (Android).
 | Donnée | Pourquoi | Détail |
 |---|---|---|
 | Adresse e-mail | Vous identifier et vous permettre de vous connecter | Gérée par le service d'authentification de Supabase. |
-| Mot de passe | Protéger votre compte | Jamais stocké en clair (haché par Supabase Auth). Longueur minimale : 6 caractères. |
+| Mot de passe | Protéger votre compte | Jamais stocké en clair (haché par Supabase Auth). Longueur minimale : 8 caractères. |
 | Code PIN parent | Protéger l'espace parent (bilans, réglages) contre l'enfant | Quatre chiffres. Jamais stocké en clair : seule une empreinte (Argon2id, avec sel) est conservée. Jamais écrit dans les journaux. Verrouillage après plusieurs essais ratés. |
 | Date de consentement | Garder la preuve que vous avez accepté ce cadre | Horodatage posé par le serveur au moment où le PIN est créé. |
 | Compteur d'usage journalier | Plafonner le nombre d'appels aux services d'IA par famille et par jour | Un compteur, sans contenu. |
@@ -347,8 +353,8 @@ sera précisé dans une prochaine version de cette politique.
 | Listes de mots non confirmées (brouillons, Dictée) | **7 jours**, puis effacement | Une liste commencée mais jamais confirmée, et qu'aucune dictée n'utilise, est effacée au bout de 7 jours, jamais en dessous de 7 jours. Effacées **immédiatement** avec le compte, en cascade (section 7) |
 | Audio des dictées lues par Ari | **Tant que le compte existe** | Aucune purge automatique à ce jour ; ces **fichiers** sont effacés **immédiatement** avec le compte, par la suppression depuis l'app (section 7) |
 | Souvenirs pédagogiques (maîtrise, lexique, portrait) | **Tant que le compte existe** | Aucune purge automatique à ce jour ; effacés **immédiatement** avec le compte, en cascade (section 7) |
-| Journal des appels d'IA | **Tant que le compte existe** ; conservé sans identifiant d'enfant après suppression de l'enfant | Le lien vers l'enfant est effacé (`set null`), la ligne technique reste |
-| Événements de séance (tours, écrans) | **30 jours** prévus | La purge est écrite mais **pas encore activée** |
+| Journal des appels d'IA | **12 mois** (365 jours), puis effacement automatique (purge hebdomadaire) | Gardé un an pour suivre les coûts ; purge hebdomadaire le dimanche à 4 h, jamais en dessous de 365 jours. À la suppression de l'enfant, le lien vers l'enfant est effacé (`set null`) et la ligne technique, sans texte, reste jusqu'à cette purge |
+| Événements de séance (tours, écrans) | **90 jours**, puis effacement automatique (purge hebdomadaire) | Calé sur la durée des photos du cahier ; purge hebdomadaire le dimanche à 4 h, jamais en dessous de 7 jours |
 | Événements d'usage (3.7, bêta) | **90 jours**, effacés automatiquement (purge hebdomadaire) | Effacés **immédiatement** avec le compte (suppression en cascade, depuis le 15 septembre 2026) ; sinon purge hebdomadaire le dimanche à 4 h, active depuis le 14 septembre 2026, jamais en dessous de 30 jours. |
 | Journal complet des échanges avec l'IA (3.8, bêta) | **90 jours**, effacés automatiquement (purge hebdomadaire) | Effacés **immédiatement** avec le compte (suppression en cascade, depuis le 15 septembre 2026) ; sinon purge hebdomadaire le dimanche à 4 h, active depuis le 14 septembre 2026, jamais en dessous de 30 jours. |
 | Compte parent, PIN, profil enfant | **Tant que le compte existe** | La suppression du compte entraîne, en cascade, celle du profil, des séances, des échanges, des souvenirs et des bilans. Les **fichiers** (photos du cahier, audio des dictées) sont effacés **avant** le compte par la fonction de suppression : rien ne survit au stockage (section 7) |
@@ -412,7 +418,7 @@ e-mail de votre compte, en précisant le prénom de l'enfant concerné.
 - Le tableau de bord de suivi (section 10) ne s'ouvre qu'avec le **compte personnel du
   fondateur** : le serveur vérifie la connexion et refuse tout autre compte. Il ne fait que
   lire, et ne montre jamais le code PIN parent.
-- Les mots de passe sont gérés par Supabase Auth. La longueur minimale est de 6 caractères.
+- Les mots de passe sont gérés par Supabase Auth. La longueur minimale est de 8 caractères.
 
 ## 10. Phase bêta : ce que l'équipe peut voir
 
