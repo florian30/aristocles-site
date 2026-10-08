@@ -18,11 +18,14 @@ permalink: /confidentialite/
 > les données à tout moment **depuis l'application** (Espace parent › Mon compte ›
 > Supprimer mon compte) : la suppression est **immédiate et irréversible**, fichiers compris.
 >
-> Version 0.9 (bêta), datée du 3 octobre 2026 — cette version fixe deux durées de
+> Version 0.10 (bêta), datée du 8 octobre 2026 — cette version ajoute **Resend**, le service
+> qui envoie les e-mails de connexion (section 4) ; rien d'autre ne change.
+>
+> La version 0.9 (3 octobre 2026) fixait deux durées de
 > conservation (section 5). Le **journal des appels d'IA** (3.7, sans le texte des échanges),
 > jusqu'ici gardé sans limite, est désormais **effacé au bout de 12 mois**. Les **événements
 > de séance** (3.7), dont la purge était écrite mais pas activée, sont désormais **effacés au
-> bout de 90 jours**, comme les photos du cahier. Rien d'autre ne change.
+> bout de 90 jours**, comme les photos du cahier. Rien d'autre ne changeait.
 >
 > La version 0.8 (1er octobre 2026) précisait le sort des
 > **photos de la copie de dictée** et des **listes de mots** de la nouvelle Dictée. Les photos
@@ -324,6 +327,7 @@ techniques, qui traitent les données **pour notre compte** et selon nos instruc
 | Prestataire | Pays | Ce qu'il reçoit | Ce qu'il ne reçoit pas |
 |---|---|---|---|
 | **Supabase** (base de données, authentification, stockage de fichiers, fonctions serveur) | **France (Paris)** | Tout ce qui est décrit à la section 3 | — |
+| **Resend** (envoi des e-mails) | **États-Unis (hors UE)** | L'adresse e-mail du parent et le contenu des e-mails de connexion qu'Aristocles lui envoie (code de connexion, réinitialisation du mot de passe) | Les données de l'enfant, ses échanges, sa voix, ses photos, le PIN |
 | **OpenAI** | **États-Unis (hors UE)** | La voix de l'enfant (transcription, avec une courte amorce de texte : 3.3) ; le texte d'Ari (synthèse vocale) ; en mode Devoirs et pour les indices d'exercice : les échanges texte, les photos et le prénom de l'enfant | L'e-mail du parent, le PIN |
 | **OpenRouter** (intermédiaire) puis **Anthropic** (modèles Claude) | **États-Unis (hors UE)** | Les échanges texte en mode Apprentissage, les photos du cahier, le prénom et la classe, les synthèses de séance, les bilans, les conversations parent ; à partir de la prochaine version de l'application : en mode Apprentissage, les deux réponses de l'enfant à la première rencontre, et, pendant la rencontre elle-même, chaque réponse avec la question posée et le genre de l'enfant (sans prénom ni classe) | L'e-mail du parent, le PIN, la voix |
 
