@@ -4,458 +4,320 @@ title: "Politique de confidentialité — Aristocles (version bêta)"
 permalink: /confidentialite/
 ---
 
-> **TL;DR** — Aristocles est une application de tutorat vocal pour les enfants du CE1 au
-> CM2. **Le compte est celui du parent** ; l'enfant n'a pas de compte. Pour fonctionner,
-> l'app envoie la **voix** de l'enfant (pour la transcrire), les **photos** de son cahier
-> (pour lire l'énoncé) et le **texte des échanges** avec Ari à des services d'intelligence
-> artificielle situés aux **États-Unis** (OpenAI, OpenRouter, Anthropic). Tout le reste est
-> stocké chez Supabase, à **Paris**. **Aucune publicité, aucun pistage, aucune revente.** La
-> voix n'est jamais conservée ; les photos sont effacées au bout de **90 jours** ; le texte
-> des échanges est conservé tant que le compte existe. **Pendant la bêta**, l'app enregistre
-> aussi les **écrans consultés et les erreurs techniques** (sans le contenu des échanges) et
-> garde une **copie complète des échanges avec le tuteur envoyés à l'IA**, pour comprendre et corriger Ari :
-> **90 jours au plus**, lue par le fondateur seul. Vous pouvez supprimer le compte et toutes
-> les données à tout moment **depuis l'application** (Espace parent › Mon compte ›
-> Supprimer mon compte) : la suppression est **immédiate et irréversible**, fichiers compris.
->
-> Version 0.10 (bêta), datée du 8 octobre 2026 — cette version ajoute **Resend**, le service
-> qui envoie les e-mails de connexion (section 4) ; rien d'autre ne change.
->
-> La version 0.9 (3 octobre 2026) fixait deux durées de
-> conservation (section 5). Le **journal des appels d'IA** (3.7, sans le texte des échanges),
-> jusqu'ici gardé sans limite, est désormais **effacé au bout de 12 mois**. Les **événements
-> de séance** (3.7), dont la purge était écrite mais pas activée, sont désormais **effacés au
-> bout de 90 jours**, comme les photos du cahier. Rien d'autre ne changeait.
->
-> La version 0.8 (1er octobre 2026) précisait le sort des
-> **photos de la copie de dictée** et des **listes de mots** de la nouvelle Dictée. Les photos
-> de la copie sont rangées dans un espace privé, que **vous** (pour votre enfant) et
-> **l'équipe** (le fondateur, section 10) pouvez ouvrir, et personne d'autre ; elles sont
-> **effacées automatiquement au bout de 90 jours**, et **toutes effacées à la fin de la
-> bêta**. Le texte et l'audio de la dictée sont gardés tant que le compte existe, et effacés
-> avec lui. Les listes de mots que vous avez confirmées sont gardées tant que le compte
-> existe ; une liste commencée mais jamais confirmée est effacée au bout de
-> 7 jours (section 5). Rien d'autre ne changeait.
->
-> La version 0.7 (22 septembre 2026) actait deux choses, qui ne
-> s'appliquent pas au même moment. **Dès maintenant**, quelle que soit la version de
-> l'application installée : depuis le 16 septembre 2026, le **tableau de bord de suivi** de
-> la bêta s'ouvre avec le compte personnel du fondateur, et il lui montre **tout** ce que la
-> bêta recueille, y compris le mot à mot des échanges de l'enfant avec Ari, la copie complète
-> des échanges avec l'IA, les événements d'usage, l'e-mail du parent et les photos du cahier
-> (section 10) ; le fondateur en est le seul lecteur. **À partir de la prochaine version de
-> l'application**, et seulement une fois qu'elle est installée : Ari ne demande plus à
-> l'enfant son école ni le prénom de son enseignant ; ses deux réponses de la première
-> rencontre (ce qu'il aime faire en dehors de l'école, ce qu'il préfère à l'école) sont
-> enregistrées et transmises au tuteur, avec son prénom et sa classe, en mode Apprentissage ;
-> Ari réagit à chaque réponse de la rencontre par un appel à l'IA qui reçoit le genre de
-> l'enfant, sans son prénom ni sa classe (sections 3.2 et 3.5) ; en mode Devoirs, quelques
-> mots de l'énoncé accompagnent la voix envoyée à la transcription (section 3.3), **sans
-> nouveau prestataire**. Une application qui n'est pas mise à jour continue de fonctionner
-> comme avant. La version 0.6 actait que **la suppression du compte se fait depuis
-> l'application** (section 5, section 7) : Espace parent › Mon
-> compte › Supprimer mon compte, le mot de passe du compte est demandé, l'effacement est
-> **immédiat et irréversible** et emporte aussi les **fichiers** (photos du cahier, audio
-> des dictées). L'e-mail reste une voie de secours. La version 0.5 changeait l'adresse de
-> contact d'Aristocles pour contact@aristocles.app. La version 0.4 corrigeait l'effacement
-> des journaux de la bêta : ils sont effacés **immédiatement** avec le compte, en cascade,
-> et non plus survivants jusqu'à la purge à 90 jours.
+Version 0.14 du 13-10-2026.
+
+## L'essentiel
+
+1. **Pourquoi nous avons besoin de données.** Ari aide votre enfant en le questionnant,
+   sans jamais lui donner la réponse. Pour cela, il doit entendre ce qu'il dit, lire ses
+   devoirs et se souvenir de ce qu'il a déjà fait. Nous ne demandons que le strict
+   nécessaire : un prénom, un genre et une classe pour l'enfant, votre adresse e-mail pour
+   vous. Pas de compte enfant, ni nom de famille, ni date de naissance, ni photo de
+   l'enfant.
+2. **Ce que nous gardons, et combien de temps.** La voix n'est jamais enregistrée : elle
+   devient du texte, puis disparaît. Les photos de devoirs sont effacées au bout de
+   90 jours. Les échanges avec Ari et les bilans sont gardés tant que le compte existe,
+   chez notre hébergeur, à Paris.
+3. **Qui d'autre les reçoit.** Pour comprendre la voix, lire une photo et répondre, Ari
+   s'appuie sur des services d'intelligence artificielle situés aux États-Unis (OpenAI, et
+   Anthropic par l'intermédiaire d'OpenRouter), liés à nous par contrat. Ils reçoivent le
+   prénom et la classe de l'enfant, jamais votre adresse e-mail. Les e-mails passent par
+   Resend ; les notifications, si vous les activez, par Google et Apple.
+4. **Pendant la bêta.** Pour vérifier qu'Ari ne se trompe pas et ne donne jamais la
+   réponse, le fondateur relit des échanges, aidé d'outils d'intelligence artificielle.
+   Personne d'autre n'y a accès.
+5. **Ce que nous ne faisons jamais.** Aucune publicité, aucune mesure d'audience, aucun
+   pistage. Les données de votre enfant ne sont jamais vendues, louées ni cédées.
+6. **Vous gardez la main.** Vous supprimez le profil d'un enfant, ou tout le compte,
+   vous-même depuis l'application, immédiatement. Pour obtenir une copie de vos données,
+   les corriger ou retirer votre accord : contact@aristocles.app. Vous pouvez aussi
+   saisir la CNIL.
+
+Le détail qui suit fait foi.
 
 ---
 
 ## 1. Qui est responsable de vos données
 
-Aristocles est édité, en phase bêta, par son fondateur. Contact pour toute question ou
-demande sur vos données : contact@aristocles.app. Les coordonnées complètes de l'éditeur
-seront ajoutées avant l'ouverture publique.
+- **Responsable** : Florian Blanc, fondateur d'Aristocles.
+- **E-mail de contact** : `contact@aristocles.app`
 
-C'est à cette adresse que vous pouvez exercer vos droits (section 7) et poser vos questions.
+C'est à cette adresse que vous exercez vos droits (section 7) et posez vos questions.
+Aucun délégué à la protection des données n'est désigné.
 
 ## 2. À qui s'adresse Aristocles
 
-Aristocles est conçu pour des **enfants scolarisés du CE1 au CM2**, qui l'utilisent **sous
-le compte de leur parent**, sur l'appareil du parent. Il n'existe **pas de compte enfant** :
-c'est le parent qui crée le compte, qui crée le profil de l'enfant, et qui consent au
-traitement des données de l'enfant. L'espace parent est protégé par un **code PIN à
-quatre chiffres**.
+Aristocles accompagne des **enfants du CE1 au CM2**, qui l'utilisent **sous le compte de
+leur parent**, sur l'appareil du parent. Il n'existe **pas de compte enfant** : le parent
+crée le compte, crée jusqu'à **quatre profils** d'enfants et donne son accord pour eux.
+Chaque enfant choisit son profil à l'ouverture de l'application ; ses séances et ses
+progrès ne sont montrés qu'à lui et à vous, jamais à un frère ou une sœur. L'espace
+parent est protégé par un code à quatre chiffres.
 
-Pendant la phase bêta, l'application est diffusée à un cercle restreint de familles, par
-TestFlight (iPhone) et par la piste de test interne de Google Play (Android).
+Pendant la bêta, l'application est diffusée à un cercle restreint de familles, par
+TestFlight (iPhone) et par la piste de test de Google Play (Android).
 
-## 3. Quelles données nous traitons, et pourquoi
+## 3. Quelles données nous utilisons, et pourquoi
 
-### 3.1 Le compte parent
+**Base légale : votre consentement.** Vous le donnez pour vous et pour vos enfants en
+cochant la case de l'inscription (section 6). Les notifications demandent un accord à
+part (3.6). Vous pouvez retirer votre accord à tout moment (section 7).
 
-| Donnée | Pourquoi | Détail |
-|---|---|---|
-| Adresse e-mail | Vous identifier et vous permettre de vous connecter | Gérée par le service d'authentification de Supabase. |
-| Mot de passe | Protéger votre compte | Jamais stocké en clair (haché par Supabase Auth). Longueur minimale : 8 caractères. |
-| Code PIN parent | Protéger l'espace parent (bilans, réglages) contre l'enfant | Quatre chiffres. Jamais stocké en clair : seule une empreinte (Argon2id, avec sel) est conservée. Jamais écrit dans les journaux. Verrouillage après plusieurs essais ratés. |
-| Date de consentement | Garder la preuve que vous avez accepté ce cadre | Horodatage posé par le serveur au moment où le PIN est créé. |
-| Compteur d'usage journalier | Plafonner le nombre d'appels aux services d'IA par famille et par jour | Un compteur, sans contenu. |
+### 3.1 Votre compte
 
-Le formulaire d'inscription ne demande que l'e-mail et le mot de passe. Aucun nom, aucune
-adresse postale, aucun numéro de téléphone du parent n'est demandé.
+| Donnée | Pourquoi |
+|---|---|
+| Adresse e-mail | Vous identifier, vous envoyer les codes de connexion |
+| Mot de passe | Protéger votre compte. Il n'est jamais conservé en clair |
+| Code parent (4 chiffres) | Protéger l'espace parent. Il est chiffré de façon irréversible : personne, pas même nous, ne peut le lire |
+| Date de votre accord | Garder la preuve de votre consentement |
+| Compteur d'usage journalier | Limiter le nombre d'appels aux services d'IA par famille. Un nombre, sans contenu |
+
+Nous ne demandons ni votre nom, ni votre adresse postale, ni votre numéro de téléphone.
 
 ### 3.2 Le profil de l'enfant
 
-| Donnée | Pourquoi | Obligatoire ? |
-|---|---|---|
-| Prénom | Pour qu'Ari s'adresse à l'enfant par son prénom | Oui |
-| Genre (fille / garçon / autre / non précisé) | Pour accorder correctement les phrases d'Ari. À partir de la prochaine version de l'application : pour accorder la phrase qu'Ari improvise en réaction à chaque réponse de la première rencontre (ci-dessous) | Oui |
-| Classe (CE1, CE2, CM1 ou CM2) | Pour adapter le niveau des exercices et du langage | Oui |
-| École | Posée à l'enfant par Ari lors de la première rencontre. **Question retirée à partir de la prochaine version de l'application** ; les réponses déjà données sont conservées (voir ci-dessous) | Non |
-| Prénom du maître ou de la maîtresse | Posée à l'enfant lors de la première rencontre. **Question retirée à partir de la prochaine version de l'application** ; les réponses déjà données sont conservées (voir ci-dessous) | Non |
-| Matières actives, notions à travailler en priorité | Réglages choisis par le parent | Non |
-| Ce que l'enfant aime faire en dehors de l'école, ce qu'il préfère à l'école | À partir de la prochaine version de l'application : ses réponses à Ari lors de la première rencontre, pour qu'Ari sache un peu à qui il parle | Non |
+| Donnée | Pourquoi |
+|---|---|
+| Prénom | Qu'Ari s'adresse à l'enfant par son prénom |
+| Genre (fille, garçon, autre, non précisé) | Que les phrases d'Ari soient correctement accordées |
+| Classe (CE1 à CM2) | Adapter le niveau des exercices et du langage |
+| Couleur du profil | Que chaque enfant reconnaisse le sien |
+| Matières et notions à travailler | Vos réglages, facultatifs |
+| Ce qu'il aime faire en dehors de l'école, ce qu'il préfère à l'école | Ses réponses à Ari lors de leur première rencontre, pour qu'Ari sache un peu à qui il parle |
 
-Nous ne demandons **ni date de naissance, ni photo, ni adresse de l'enfant**.
+Ces deux réponses sont gardées telles que l'enfant les a dites ; s'il y cite un nom, il y
+reste. Les premières versions de l'application demandaient aussi le nom de l'école et le
+prénom de l'enseignant : les réponses déjà données restent sur le profil, et vous pouvez
+en demander l'effacement.
 
-**La première rencontre change avec la prochaine version de l'application.** Les deux
-paragraphes qui suivent ne s'appliquent qu'une fois cette version installée. Tant qu'elle
-ne l'est pas, rien ne change : Ari pose les questions d'avant (dont l'école et le prénom de
-l'enseignant), ce que l'enfant dit aimer faire en dehors de l'école **n'est pas enregistré**,
-et aucun appel à l'IA n'est fait pendant la rencontre.
+### 3.3 La voix
 
-Lors de la première rencontre, Ari demande à l'enfant ce qu'il aime faire en dehors de
-l'école et ce qu'il préfère à l'école. **Ses deux réponses sont enregistrées telles
-quelles**, sans correction : ce sont des réponses libres, qui peuvent contenir un nom s'il
-en dit un (le sien, celui d'un camarade, d'un lieu). Une seule exception : quand l'IA qui
-réagit pendant la rencontre (ci-dessous) a vu dans ce que l'enfant a dit non pas une
-réponse mais une question à Ari, un jeu ou un propos qui n'a pas sa place, **rien n'est
-enregistré pour cette question** ; l'enfant peut répondre à nouveau avec le bouton « Ce
-n'est pas ça ». Si l'IA n'a pas répondu à temps, la réponse est enregistrée telle quelle.
-Les réponses enregistrées sont ensuite **transmises au tuteur à chaque échange du mode
-Apprentissage** (3.5), chacune coupée à 120 caractères.
+L'enfant parle à Ari **en appuyant sur un bouton** : le micro n'écoute que pendant
+l'appui. L'enregistrement est envoyé à OpenAI (service Whisper), qui le transforme en
+texte.
 
-**Pendant la rencontre, Ari réagit à chaque réponse.** Chaque réponse de l'enfant (le
-« bonjour » d'échauffement compris, qui n'est pas enregistré) est **envoyée une fois à un
-modèle d'IA** (via OpenRouter, puis Anthropic Claude, aux États-Unis), avec la question
-qu'Ari venait de poser, pour qu'Ari y réponde d'**une phrase**. Le modèle dit aussi ce qu'il
-a vu dans la réponse (une réponse, une question à Ari, un jeu, un propos qui n'a pas sa
-place) ; c'est l'application, pas le modèle, qui décide de reposer la question (une fois au
-plus) ou de passer. Si l'enfant a corrigé sa réponse avec le bouton « Ce n'est pas ça »,
-l'ancienne et la nouvelle partent ensemble. **Cet envoi contient le genre de l'enfant**, pour que les mots d'Ari
-soient accordés — et pour cela seulement : le modèle a pour consigne de ne pas choisir ce
-qu'il dit selon le genre. **Il ne contient ni le prénom ni la classe.** Si le modèle ne
-répond pas à temps, Ari dit une phrase toute faite. Cet appel est compté dans le journal des
-appels d'IA (3.7, sans le texte) et, pendant la bêta, copié dans le journal complet (3.8).
+- **L'enregistrement n'est conservé nulle part**, ni sur nos serveurs, ni dans une base de
+  données.
+- **Le texte obtenu est conservé** avec la séance (3.5).
 
-Jusqu'à cette version, Ari demande aussi à l'enfant **le nom de son école** et **le prénom
-de son maître ou de sa maîtresse**. **Avec la prochaine version, ces deux questions ne sont
-plus posées** : l'école permet de situer un mineur, et le prénom de l'enseignant concerne un
-adulte qui n'a rien accepté. Les réponses déjà données **ne sont pas effacées** : elles
-restent sur le profil de l'enfant, et une application mise à jour n'en ajoute plus aucune.
-Vous pouvez en demander l'effacement (section 7), et elles disparaissent avec le compte.
+Votre voix, quand vous dictez un retour (3.7), suit le même chemin : elle est transcrite,
+puis l'enregistrement est oublié. Vous relisez le texte avant de l'envoyer.
 
-### 3.3 La voix de l'enfant
+La voix d'Ari est fabriquée à partir de son texte par OpenAI (synthèse vocale). Elle n'est
+pas conservée sur nos serveurs.
 
-L'enfant parle à Ari en **appuyant sur un bouton** (push-to-talk) : le micro n'écoute que
-pendant qu'il est enfoncé. L'enregistrement est envoyé à notre serveur, qui le transmet à
-**OpenAI (service Whisper)** pour le transformer en texte, en français.
+### 3.4 Les photos
 
-- **L'enregistrement audio n'est conservé nulle part** : ni sur nos serveurs, ni dans une
-  base de données. Sur le téléphone, le fichier ne vit que dans un dossier temporaire.
-- **Le texte obtenu est conservé** dans l'historique de la séance (voir 3.5).
-- Nos journaux techniques ne gardent que la durée de l'enregistrement et sa taille, jamais
-  son contenu ni sa transcription.
-- Pour aider la transcription, l'enregistrement part avec une **courte amorce de texte** :
-  quelques phrases fixes qui présentent Ari et, dans un exercice oral, une vingtaine de mots
-  au plus tirés de l'exercice (des mots du programme, pas des données de l'enfant). **À
-  partir de la prochaine version de l'application**, en mode Devoirs, cette amorce porte aussi une vingtaine de mots au plus de l'**énoncé**
-  affiché — en général le texte lu sur la photo du cahier (3.4), où se trouvent par exemple
-  des noms propres. **Aucun nouveau prestataire** : OpenAI reçoit déjà ces photos en mode
-  Devoirs (section 4). Nos journaux ne gardent que le nombre de ces mots, jamais les mots.
+En mode Devoirs et en Dictée, l'enfant peut **photographier l'énoncé** ou sa dictée. Un
+modèle d'IA (Anthropic, et en mode Devoirs aussi OpenAI) lit la photo pour en tirer le
+texte.
 
-À l'inverse, la voix d'Ari est **fabriquée** à partir de son texte par **OpenAI (synthèse
-vocale)**. Le fichier audio produit n'est pas stocké sur nos serveurs ; il est mis en cache
-dans un dossier temporaire du téléphone.
-
-### 3.4 Les photos du cahier
-
-En mode Devoirs et en Dictée, l'enfant peut **photographier l'énoncé** ou sa dictée. La
-photo est stockée dans un espace privé de Supabase, rangé par enfant, et lue par un modèle
-d'IA (via OpenRouter, puis Anthropic Claude ; en mode Devoirs, également OpenAI) qui en
-extrait le texte : consignes à faire, ou mots écrits par l'enfant.
-
-- Le stockage est **privé** : seul le parent connecté peut relire les photos de son enfant
-  (en plus de l'équipe, pendant la bêta : section 10). Limite : 5 Mo par photo, formats
-  JPEG, PNG et HEIC.
-- **Les photos sont effacées automatiquement au bout de 90 jours** (purge hebdomadaire,
-  le dimanche à 4 h du matin). Le fait qu'une photo a été prise (date, écran) reste dans
-  l'historique, sans l'image.
-- **Photo de la copie de dictée** : elle suit le même régime que les autres photos. Elle est
-  gardée pendant la bêta pour que l'équipe puisse analyser et corriger la lecture de la
-  copie, dans cet espace privé, **effacée d'elle-même au bout de 90 jours**, et **toutes les
-  photos de dictée seront effacées à la fin de la bêta**, sans attendre les 90 jours. Le
-  **texte** et l'**audio** de la dictée, eux, sont gardés avec la dictée tant que le compte
-  existe (section 5).
-- Le **texte extrait** de la photo est conservé dans l'historique de la séance.
-- L'application n'accède **pas** à la galerie de photos du téléphone : seulement à l'appareil
-  photo, au moment de la prise de vue.
+- Les photos sont rangées dans un **espace privé** : seul vous pouvez les revoir (et, pendant
+  la bêta, le fondateur : section 10).
+- **Elles sont effacées automatiquement au bout de 90 jours.** Les photos de dictée sont
+  en plus **toutes effacées à la fin de la bêta**.
+- Le **texte lu** sur la photo est gardé avec la séance.
+- L'application n'ouvre la **galerie de photos** du téléphone qu'**à votre demande**, pour
+  choisir une photo de devoir ou une capture d'écran à joindre à un retour (3.7). Elle ne
+  reçoit que l'image choisie, jamais le reste de la galerie.
 
 ### 3.5 Les échanges avec Ari et le travail de l'enfant
 
-Tout ce que l'enfant dit à Ari (transcrit en texte), et tout ce qu'Ari lui répond, est
-conservé dans l'**historique de la séance**. Cet historique est rattaché à l'enfant, et donc
-à votre compte. Il sert à :
+Ce que l'enfant dit à Ari (en texte) et ce qu'Ari lui répond sont gardés avec la séance.
+C'est ce qui permet à Ari de suivre la conversation, et de vous écrire les **bilans** du
+jour et de la semaine.
 
-- permettre à Ari de suivre le fil de la conversation pendant la séance ;
-- produire, à la fin de chaque écran, une **synthèse rédigée** de ce que l'enfant a fait ;
-- produire les **bilans** qui vous sont destinés (quotidiens et hebdomadaires) ;
-- alimenter, sur demande, la conversation « Parler à Ari » de l'espace parent.
+Sont aussi gardés : les exercices faits et leur résultat, les dictées (texte, mots à
+travailler, fautes relevées, et l'audio de la dictée lue par Ari), les listes de mots que
+vous avez données, les devoirs, et vos propres conversations avec Ari dans l'espace
+parent.
 
-Sont aussi conservés : les exercices résolus et leur issue, les dictées (texte de référence,
-mots cibles, écarts constatés, et l'enregistrement audio de la dictée lue par Ari), les
-devoirs datés, le « pouce » que l'enfant donne à la fin d'un écran, et les conversations
-entre **vous** et Ari dans l'espace parent.
+Pour que les séances et les bilans s'enchaînent, nous gardons aussi, par enfant, où il en
+est dans chaque notion et les mots de dictée sur lesquels il bute.
 
-En mode Devoirs, pour les synthèses et pour les bilans, chaque appel à un modèle d'IA reçoit
-le **prénom** et la **classe** de l'enfant, ainsi que les consignes du devoir en cours : c'est
-ce qui permet à Ari de parler à l'enfant et non à un inconnu. La transcription de la voix et
-la synthèse vocale (3.3) ne les reçoivent pas. **En mode Apprentissage**, le tuteur ne reçoit
-aujourd'hui ni le prénom ni la classe ; **à partir de la prochaine version de
-l'application**, il les reçoit à chaque échange, avec, quand l'enfant les a données, **ses
-deux réponses de la première rencontre** (3.2), chacune coupée à 120 caractères. Le mode
-Devoirs ne reçoit pas ces deux réponses.
+**Ce que reçoivent les modèles d'IA.** À chaque échange, le modèle reçoit le prénom et la
+classe de l'enfant, ce qu'il travaille et la conversation en cours. En mode Apprentissage,
+il reçoit aussi les deux réponses de la première rencontre (3.2). Pendant la rencontre
+elle-même, Ari réagit à chaque réponse : le modèle reçoit alors la réponse et le genre de
+l'enfant, sans son prénom ni sa classe.
 
-### 3.6 Les souvenirs pédagogiques
+### 3.6 Les notifications
 
-Pour qu'Ari s'améliore d'une séance à l'autre, nous conservons par enfant :
+**Elles sont adressées au parent, jamais à l'enfant, et seulement si vous les activez.**
+Vous les coupez, type par type ou toutes, dans Espace parent › Notifications ou dans les
+réglages du téléphone.
 
-- un **état de maîtrise par notion** (jamais vue, fragile, en cours, acquise…), mis à jour à
-  la fin des séances ;
-- un **lexique de dictée** : les mots sur lesquels l'enfant bute, et combien de fois ;
-- un **portrait** (intérêts, préférences pédagogiques, contexte personnel) destiné à être
-  extrait automatiquement des synthèses de séance. **Cette extraction automatique est
-  désactivée à ce jour** : le portrait reste vide tant qu'elle ne l'est pas.
+Il y en a cinq types : le bilan de la semaine, le bilan du jour, les nouveautés de l'app,
+les actualités d'Aristocles et de petits rappels. Une notification de bilan cite le
+**prénom** de l'enfant et dit en une phrase ce qu'il a fait ; elle peut s'afficher sur
+l'écran verrouillé, sauf si vous en masquez l'aperçu dans les réglages du téléphone.
+Cette phrase est écrite par un modèle d'IA (Anthropic, via OpenRouter) à partir des faits
+de la semaine, jamais à partir des mots de l'enfant.
 
-Ces souvenirs ne sont **pas** injectés dans les conversations d'Ari avec l'enfant ; ils
-servent aux bilans et à la conversation parent. Les deux réponses de la première rencontre
-(3.2) n'en font pas partie : elles **sont** transmises au tuteur en mode Apprentissage, à
-partir de la prochaine version de l'application.
+Pour les envoyer, nous gardons le jeton de notification de votre téléphone et vos choix,
+ainsi qu'un journal des envois (section 5).
 
-### 3.7 Les données techniques
+L'application peut aussi afficher un court message d'Aristocles (une nouveauté, une
+enquête). Ces messages sont les mêmes pour toutes les familles concernées. Un message
+destiné à l'enfant n'ouvre jamais de page web et ne s'affiche jamais pendant une séance.
 
-| Donnée | Ce qu'elle contient | Ce qu'elle ne contient jamais |
-|---|---|---|
-| Journal des appels d'IA | Rôle (tuteur, lecture de photo, réaction de la rencontre…), modèle utilisé, durée, nombre de jetons, coût estimé, succès ou échec, identifiant de l'enfant, identifiants de séance et d'écran ; pour la réaction de la rencontre (à partir de la prochaine version de l'application) : le genre de l'enfant et ce que le modèle a vu dans la réponse, sans le texte | Le texte envoyé, le texte reçu, le prénom (pendant la bêta, une copie complète des échanges vit dans un journal **à part**, décrit en 3.8) |
-| Événements de séance | Type d'événement (début de tour, fin d'écran…), numéro de tour, écran concerné, horodatage | Le contenu des échanges |
-| Événements d'usage (bêta) | Ce qui se passe **autour** des séances : liste ci-dessous | Le mot de passe, le code PIN, le contenu des échanges, le prénom, l'e-mail |
-| Journal de purge | Nombre de photos candidates, supprimées, en échec, à chaque passage | Les chemins des fichiers, l'identifiant de l'enfant |
-| Version de l'app | Le numéro de build installé, pour vérifier qu'il est encore pris en charge | — |
+### 3.7 Vos retours sur l'application
 
-**Les événements d'usage, ajoutés pendant la bêta.** Pour comprendre comment l'application
-est utilisée et où elle casse, l'app envoie à notre serveur, par petits lots, ce qui se passe
-autour des séances :
+Dans l'espace parent, l'écran « Votre avis sur l'application » vous permet de nous
+signaler un problème ou une idée, par écrit ou à la voix (3.3), avec une capture d'écran
+si vous le souhaitez. **Rien ne part sans que vous touchiez « Envoyer ».**
 
-- l'**ouverture** de l'app, son passage à l'arrière-plan et son retour au premier plan ;
-- la **connexion** et la déconnexion du parent, avec la *méthode* utilisée (code reçu par
-  e-mail, mot de passe, inscription, récupération de mot de passe) — jamais le secret ;
-- la saisie du **code PIN** parent : uniquement son *issue* (réussie, ratée, verrouillée) ;
-- les **écrans consultés** (nom de l'écran, temps passé dessus, parfois un détail comme la
-  page affichée ou l'étape en cours), et l'entrée ou la sortie d'un **mode** (Apprentissage,
-  Devoirs, Dictée) ;
-- les **erreurs techniques** non rattrapées : la classe de l'erreur, l'écran où elle s'est
-  produite, un code court s'il y en a un, et les chemins du code concerné (40 lignes au plus).
+Avec votre message partent : sa catégorie, l'enfant concerné si vous en choisissez un, un
+lien vers sa dernière séance, et des informations techniques (version de l'app, modèle et
+système du téléphone, taille d'écran et de police, langue, notifications activées ou
+non). Ces informations servent à reproduire le problème.
 
-Chaque événement porte l'identifiant de votre compte, celui de l'enfant actif s'il y en a un,
-la séance en cours s'il y en a une, la version de l'app et sa plateforme (iPhone ou Android),
-et un identifiant tiré au hasard à chaque lancement de l'app.
+Le fondateur lit chaque retour. Il en reçoit aussi le texte par e-mail chaque matin, avec
+le prénom et la classe de l'enfant choisi, mais sans votre adresse e-mail ni la capture.
+Pour suivre la correction, il peut en reprendre le texte dans un outil de développement
+assisté par l'IA (Claude, d'Anthropic). Les retours sont gardés 12 mois.
 
-Ce que ces événements **ne contiennent jamais** :
+### 3.8 Les données techniques
 
-- **votre mot de passe et votre code PIN** : ni la valeur, ni un fragment, ni même leur
-  longueur. Le serveur refuse tout événement qui en porterait un ;
-- **le contenu des échanges** de votre enfant avec Ari, et son prénom. Le message brut d'une
-  erreur technique, qui pourrait en recopier une phrase, est retiré par l'app avant l'envoi,
-  et une seconde fois par le serveur ;
-- votre adresse e-mail.
+Pour que l'application fonctionne et pour corriger ses défauts, nous gardons :
 
-Ces événements ne sont lus que par le fondateur (section 10) et ne servent à aucune mesure
-d'audience ni publicité (section 8).
+- un relevé de chaque appel aux services d'IA : quel modèle, combien de temps, quel coût.
+  **Sans le texte des échanges** ;
+- le déroulé des séances (début d'un tour, fin d'un écran), sans leur contenu ;
+- pendant la bêta, ce qui se passe autour des séances : ouverture de l'app, connexion,
+  écrans consultés, erreurs techniques. **Jamais votre mot de passe ni votre code parent,
+  jamais le contenu des échanges, jamais le prénom ni votre adresse e-mail** ;
+- pendant la bêta, une copie complète de ce que le modèle d'IA reçoit et répond à chaque
+  réplique d'Ari, pour comprendre et corriger Ari (section 10). Aucune photo n'y figure.
 
-Sur le téléphone lui-même, l'app garde seulement : un réglage local (bandeau de première
-rencontre fermé ou non), la date de votre dernière visite des bilans, un cache audio
-temporaire, et, si l'envoi a échoué, les photos en attente d'envoi. Le jeton de connexion
-est conservé par la bibliothèque Supabase.
-
-### 3.8 Pendant la bêta : le journal complet des échanges avec l'IA
-
-Pendant la bêta, et seulement pendant la bêta, nous gardons pour **chaque réplique d'Ari** une
-copie exacte de ce que le modèle d'IA a reçu et de ce qu'il a rendu. C'est un journal **à
-part**, distinct de l'historique de séance (3.5) et du journal des appels d'IA (3.7). À
-partir de la prochaine version de l'application, il couvre aussi les **réactions d'Ari
-pendant la première rencontre** (3.2) : la question posée, la ou les réponses de l'enfant,
-son genre, et ce que le modèle a rendu — sans prénom ni classe, que le modèle ne reçoit pas.
-
-**Ce qu'il contient.** Côté requête : le contexte de séance envoyé au modèle (dont le
-**prénom** et la **classe** de l'enfant — en mode Apprentissage, à partir de la prochaine
-version de l'application, avec ses deux réponses de la première rencontre —, la notion
-travaillée ou l'énoncé du devoir),
-l'**historique complet du tour** (ce que l'enfant a dit, transcrit mot à mot ; ce qu'Ari a
-répondu), la description du visuel affiché à l'écran, les **chemins** des photos du cahier
-(le nom du fichier, jamais l'image), les noms des outils mis à disposition du modèle et les
-réglages de l'appel. Côté réponse : la **sortie brute** du modèle (texte, appels d'outils,
-raison d'arrêt, jetons consommés) et ce qui a réellement été dit à l'enfant après nos filtres.
-Le texte des consignes d'Ari (le « prompt système ») est gardé une seule fois par version,
-à part.
-
-**Pourquoi.** Pour comprendre pourquoi Ari a dit ce qu'il a dit, et le corriger. Un tuteur qui
-ne doit jamais donner la réponse se règle en relisant ses tours : là où il en a trop dit, où
-il s'est trompé, où il a mal compris l'enfant. Le journal des appels d'IA (3.7), qui n'a pas
-le texte, ne permet pas ce travail.
-
-**Ce que ce journal n'ajoute pas.** Aucun envoi supplémentaire : c'est une copie, chez
-Supabase à Paris, de ce qui est déjà transmis à nos prestataires pour faire fonctionner Ari
-(section 4). Aucune photo n'y est stockée.
-
-**Qui le lit.** Le **fondateur, seul** : directement dans la base de données, ou par le
-tableau de bord de suivi (section 10), qui ne s'ouvre qu'avec son compte personnel.
-L'application n'y a pas accès : la base refuse toute lecture autre que celle du serveur.
-
-**Combien de temps.** 90 jours au plus (section 5).
-
-**Ce journal est propre à la bêta.** Il sera retiré à la fin de la bêta, données comprises.
-Cette politique changera de version ce jour-là.
+Sur le téléphone, l'application ne garde que le nécessaire : votre connexion, la date de
+votre dernière visite des bilans, un cache audio temporaire et, si un envoi a échoué, les
+photos en attente.
 
 ## 4. Qui reçoit vos données
 
 Nous ne vendons ni ne louons aucune donnée. Les seuls destinataires sont nos prestataires
-techniques, qui traitent les données **pour notre compte** et selon nos instructions.
+techniques. Ils traitent les données **pour notre compte**, selon nos instructions.
 
-| Prestataire | Pays | Ce qu'il reçoit | Ce qu'il ne reçoit pas |
-|---|---|---|---|
-| **Supabase** (base de données, authentification, stockage de fichiers, fonctions serveur) | **France (Paris)** | Tout ce qui est décrit à la section 3 | — |
-| **Resend** (envoi des e-mails) | **États-Unis (hors UE)** | L'adresse e-mail du parent et le contenu des e-mails de connexion qu'Aristocles lui envoie (code de connexion, réinitialisation du mot de passe) | Les données de l'enfant, ses échanges, sa voix, ses photos, le PIN |
-| **OpenAI** | **États-Unis (hors UE)** | La voix de l'enfant (transcription, avec une courte amorce de texte : 3.3) ; le texte d'Ari (synthèse vocale) ; en mode Devoirs et pour les indices d'exercice : les échanges texte, les photos et le prénom de l'enfant | L'e-mail du parent, le PIN |
-| **OpenRouter** (intermédiaire) puis **Anthropic** (modèles Claude) | **États-Unis (hors UE)** | Les échanges texte en mode Apprentissage, les photos du cahier, le prénom et la classe, les synthèses de séance, les bilans, les conversations parent ; à partir de la prochaine version de l'application : en mode Apprentissage, les deux réponses de l'enfant à la première rencontre, et, pendant la rencontre elle-même, chaque réponse avec la question posée et le genre de l'enfant (sans prénom ni classe) | L'e-mail du parent, le PIN, la voix |
-
-Précisions :
-
-- Pour les appels à OpenAI en mode Devoirs et pour les indices, nous demandons
-  explicitement à OpenAI de **ne pas conserver l'échange** après la réponse (paramètre
-  `store: false`), parce qu'il s'agit de données de mineurs.
-- Aucun autre tiers ne reçoit de données : **aucun outil d'analyse d'audience, aucun outil
-  de publicité, aucun outil tiers de rapport de plantage** n'est intégré à l'application.
-  Les erreurs techniques sont enregistrées par nous-mêmes, sur nos serveurs (3.7).
-- Apple (TestFlight) et Google (Google Play) distribuent l'application et peuvent, de leur
-  côté, vous demander un retour ; nous ne leur transmettons aucune donnée de l'enfant.
-
-Ces prestataires étant établis hors de l'Union européenne, les données qui leur sont
-envoyées font l'objet d'un **transfert international**. Le cadre juridique de ces transferts
-sera précisé dans une prochaine version de cette politique.
-
-## 5. Combien de temps nous conservons les données
-
-| Donnée | Durée | Comment |
+| Prestataire | Pays | Ce qu'il reçoit, et pourquoi |
 |---|---|---|
-| Enregistrement de la voix de l'enfant | **Zéro** : transmis pour transcription, jamais stocké | Pas d'écriture en base ni en stockage de fichiers |
-| Photos du cahier (énoncés, copies de dictée) | **90 jours**, puis effacement | Purge automatique hebdomadaire (dimanche 4 h), active depuis le 9 septembre 2026. Les fichiers sont aussi effacés **immédiatement** avec le compte, par la suppression depuis l'app (section 7). Les photos de copies de dictée sont de plus **toutes effacées à la fin de la bêta** |
-| Texte des échanges, synthèses, exercices, dictées, bilans, conversations parent | **Tant que le compte existe** | Aucune purge automatique à ce jour ; effacés **immédiatement** avec le compte, en cascade, par la suppression depuis l'app (section 7) |
-| Listes de mots confirmées (Dictée) | **Tant que le compte existe** | Effacées **immédiatement** avec le compte, en cascade (section 7) |
-| Listes de mots non confirmées (brouillons, Dictée) | **7 jours**, puis effacement | Une liste commencée mais jamais confirmée, et qu'aucune dictée n'utilise, est effacée au bout de 7 jours, jamais en dessous de 7 jours. Effacées **immédiatement** avec le compte, en cascade (section 7) |
-| Audio des dictées lues par Ari | **Tant que le compte existe** | Aucune purge automatique à ce jour ; ces **fichiers** sont effacés **immédiatement** avec le compte, par la suppression depuis l'app (section 7) |
-| Souvenirs pédagogiques (maîtrise, lexique, portrait) | **Tant que le compte existe** | Aucune purge automatique à ce jour ; effacés **immédiatement** avec le compte, en cascade (section 7) |
-| Journal des appels d'IA | **12 mois** (365 jours), puis effacement automatique (purge hebdomadaire) | Gardé un an pour suivre les coûts ; purge hebdomadaire le dimanche à 4 h, jamais en dessous de 365 jours. À la suppression de l'enfant, le lien vers l'enfant est effacé (`set null`) et la ligne technique, sans texte, reste jusqu'à cette purge |
-| Événements de séance (tours, écrans) | **90 jours**, puis effacement automatique (purge hebdomadaire) | Calé sur la durée des photos du cahier ; purge hebdomadaire le dimanche à 4 h, jamais en dessous de 7 jours |
-| Événements d'usage (3.7, bêta) | **90 jours**, effacés automatiquement (purge hebdomadaire) | Effacés **immédiatement** avec le compte (suppression en cascade, depuis le 15 septembre 2026) ; sinon purge hebdomadaire le dimanche à 4 h, active depuis le 14 septembre 2026, jamais en dessous de 30 jours. |
-| Journal complet des échanges avec l'IA (3.8, bêta) | **90 jours**, effacés automatiquement (purge hebdomadaire) | Effacés **immédiatement** avec le compte (suppression en cascade, depuis le 15 septembre 2026) ; sinon purge hebdomadaire le dimanche à 4 h, active depuis le 14 septembre 2026, jamais en dessous de 30 jours. |
-| Compte parent, PIN, profil enfant | **Tant que le compte existe** | La suppression du compte entraîne, en cascade, celle du profil, des séances, des échanges, des souvenirs et des bilans. Les **fichiers** (photos du cahier, audio des dictées) sont effacés **avant** le compte par la fonction de suppression : rien ne survit au stockage (section 7) |
+| **Supabase** (hébergement) | **France (Paris)** | Tout ce que décrit la section 3 : c'est là que vos données sont gardées |
+| **OpenAI** | États-Unis | La voix, pour la transcrire ; le texte d'Ari, pour lui donner une voix ; en mode Devoirs et pour les indices, les échanges, les photos et le prénom de l'enfant |
+| **OpenRouter**, qui transmet à **Anthropic** (modèles Claude) | États-Unis | Les échanges, les photos, le prénom, le genre et la classe de l'enfant, pour qu'Ari réponde, lise les devoirs et écrive les bilans et les notifications ; les retours que le fondateur reprend dans son outil de développement (3.7) |
+| **Resend** (envoi des e-mails) | États-Unis | Votre adresse e-mail et les e-mails de connexion ; l'e-mail du matin du fondateur, qui reprend le texte de vos retours (3.7) |
+| **Firebase** (service de Google), puis Apple ou Google | États-Unis | Si vous activez les notifications : le jeton de votre téléphone et le texte de chaque notification (3.6) |
+
+Aucun de ces prestataires ne reçoit votre code parent. Les services d'IA ne reçoivent
+jamais votre adresse e-mail.
+
+Aucun autre tiers ne reçoit de données : **aucun outil de publicité, de mesure d'audience
+ou de rapport de plantage** n'est intégré à l'application. Apple et Google, qui
+distribuent l'application, ne reçoivent de nous que le texte des notifications.
+
+**Transferts hors de l'Union européenne.** OpenAI, OpenRouter, Anthropic, Resend et
+Google sont situés aux États-Unis. Ces transferts sont encadrés par les **clauses
+contractuelles types** de la Commission européenne, prévues par le contrat de traitement
+des données de chaque prestataire. Resend et Google adhèrent en plus au **cadre de
+protection des données UE–États-Unis** (*Data Privacy Framework*). Vous pouvez obtenir une
+copie de ces garanties à contact@aristocles.app.
+
+**Ce que font les services d'IA des données reçues.** Ils **ne s'en servent pas pour
+entraîner leurs modèles**. OpenRouter ne garde pas les échanges qu'il transmet. OpenAI ne
+garde pas l'enregistrement de la voix après l'avoir transcrit. Pour le reste, OpenAI et
+Anthropic peuvent garder les échanges **30 jours au plus**, pour détecter les abus, puis
+les effacent ; seul un échange signalé comme contraire à leurs règles d'usage peut être
+gardé plus longtemps. Resend garde une copie des e-mails envoyés.
+
+## 5. Combien de temps nous gardons les données
+
+| Donnée | Durée |
+|---|---|
+| Enregistrement de la voix | **Jamais conservé** |
+| Photos du cahier (devoirs, dictées) | **90 jours**, puis effacement automatique. Les photos de dictée sont toutes effacées à la fin de la bêta |
+| Compte, profils, échanges avec Ari, exercices, dictées et leur audio, listes de mots, bilans, suivi des notions | **Tant que le compte existe** |
+| Listes de mots non confirmées (Dictée) | **7 jours**, puis effacement |
+| Journal des appels d'IA (sans le texte des échanges) | **12 mois** (365 jours), puis effacement |
+| Événements de séance (sans le contenu des échanges) | **90 jours**, puis effacement |
+| Événements d'usage (bêta) | **90 jours**, puis effacement |
+| Journal complet des échanges avec l'IA (bêta) | **90 jours**, puis effacement ; retiré à la fin de la bêta |
+| Notifications : jeton du téléphone, vos choix | Tant que le téléphone est connecté au compte |
+| Notifications : journal d'envoi | **90 jours**, puis effacement |
+| Vos retours sur l'application, capture comprise | **12 mois**, puis effacement |
+
+Supprimer le compte efface **immédiatement** tout ce qui précède, fichiers compris. Seul
+le journal des appels d'IA, qui ne contient aucun texte, est détaché du compte et suit sa
+durée de 12 mois.
 
 ## 6. Mineurs et consentement
 
-- Le parent **crée le compte**, **crée le profil** de l'enfant et **consent** au traitement
-  des données de l'enfant, par une case à cocher lors de l'inscription. Sans cette case,
-  l'inscription est impossible.
-- L'enfant n'a pas de compte, pas d'e-mail, pas de mot de passe.
-- Le parent peut **retirer son consentement** à tout moment en demandant la suppression du
-  compte (section 7). Le retrait met fin à l'usage de l'application.
+- Le parent **crée le compte** et **les profils**, et **donne son accord** pour ses
+  enfants en cochant une case à l'inscription. Sans elle, l'inscription est impossible.
+  Cet accord vaut pour tous les profils du compte, y compris ceux ajoutés plus tard.
+- L'enfant n'a ni compte, ni e-mail, ni mot de passe.
+- Les **notifications** demandent un accord à part, que vous retirez à tout moment
+  (3.6).
+- Vous pouvez **retirer votre accord** à tout moment, en supprimant le compte ou en nous
+  écrivant (section 7). Le retrait met fin à l'usage de l'application.
 
 ## 7. Vos droits, et comment les exercer
 
-Vous disposez, pour vous et pour votre enfant, des droits suivants :
+Vous disposez, pour vous et pour vos enfants, des droits suivants :
 
-- **Accès** : savoir quelles données nous détenons, et en obtenir une copie.
-- **Rectification** : corriger une donnée. Le prénom, le genre, les matières et les notions
-  prioritaires se modifient directement dans l'espace parent (« Mon compte »). La classe et
-  l'e-mail se modifient sur demande.
-- **Effacement** : faire supprimer le compte et toutes les données de l'enfant, **y compris
-  les journaux de la bêta (3.7 et 3.8) et les fichiers (photos du cahier, audio des
-  dictées), effacés en même temps que le compte**. Deux voies :
-    - **Depuis l'application** : Espace parent › Mon compte › **Supprimer mon compte**.
-      Votre mot de passe vous est demandé ; la suppression est **immédiate et
-      irréversible**, fichiers compris (photos, audio).
-    - **Par e-mail** : si votre application ne montre pas encore ce bouton, mettez-la à
-      jour ; si vous ne pouvez plus vous connecter, écrivez à contact@aristocles.app
-      depuis l'adresse e-mail de votre compte : la suppression est alors faite à la main,
-      dans un délai d'**un mois au plus**.
-- **Retrait du consentement** : à tout moment, avec le même effet qu'une demande
-  d'effacement.
-- **Portabilité** : obtenir vos données dans un format lisible.
-- **Réclamation** : vous pouvez saisir la CNIL (www.cnil.fr) si vous estimez que vos droits
-  ne sont pas respectés.
+- **Accès** et **portabilité** : obtenir une copie de vos données, dans un format
+  lisible.
+- **Rectification** : le prénom, le genre, les matières et les notions se modifient dans
+  l'espace parent ; la classe et l'adresse e-mail, sur demande.
+- **Effacement** :
+    - le **profil d'un enfant** : Espace parent › Mes enfants › la fiche de l'enfant ›
+      Supprimer le profil. Tout ce qui le concerne est effacé immédiatement ; le compte et
+      les autres profils sont conservés. Vos retours (3.7) restent, sans le lien vers cet
+      enfant ;
+    - **tout le compte** : Espace parent › Mon compte › Supprimer mon compte.
+      L'effacement est immédiat et définitif, fichiers compris.
+  Votre mot de passe vous est demandé dans les deux cas.
+- **Retrait du consentement**, à tout moment.
+- **Réclamation** auprès de la CNIL (www.cnil.fr), si vous estimez que vos droits ne sont
+  pas respectés.
 
-Pour exercer un droit, écrivez à contact@aristocles.app depuis l'adresse
-e-mail de votre compte, en précisant le prénom de l'enfant concerné.
+Pour tout le reste, ou si vous ne pouvez plus vous connecter, écrivez à
+contact@aristocles.app depuis l'adresse de votre compte, en précisant le prénom de
+l'enfant concerné. Nous répondons au plus tard sous un mois.
 
-## 8. Pas de publicité, pas de pistage, pas de revente
+## 8. Ce que nous ne faisons jamais
 
-- L'application ne contient **aucune publicité** et aucun kit publicitaire.
-- Elle ne fait **aucun suivi** de votre activité à des fins publicitaires ou de mesure
-  d'audience : aucun identifiant publicitaire n'est lu, aucun outil d'analyse tiers n'est
-  installé. Le manifeste de confidentialité iOS déclare `NSPrivacyTracking = false`.
+- Aucune **publicité**, aucun kit publicitaire.
+- Aucune **mesure d'audience** ni **pistage** : aucun identifiant publicitaire n'est lu,
+  aucun outil d'analyse tiers n'est installé.
 - Vos données ne sont **jamais vendues, louées ni cédées**.
 
 ## 9. Sécurité
 
-- Toutes les communications entre l'application et nos serveurs sont **chiffrées (HTTPS)** ;
-  l'app refuse les connexions non chiffrées.
-- Les fichiers (photos, audio de dictée) sont dans des espaces **privés**, accessibles
-  uniquement au parent de l'enfant concerné (et, pendant la bêta, à l'équipe : section 10).
-- La base de données applique une **isolation par famille** : un parent ne peut lire que
-  les données de ses propres enfants.
-- Le PIN parent est protégé par une empreinte **Argon2id** avec verrouillage après échecs.
-- Les journaux techniques (3.7) ne contiennent **jamais** le contenu des échanges ni la voix.
-  La seule copie complète des échanges hors historique de séance est le journal de la bêta
-  (3.8) : lisible par le fondateur seul, jamais la voix, jamais les photos.
-- Le tableau de bord de suivi (section 10) ne s'ouvre qu'avec le **compte personnel du
-  fondateur** : le serveur vérifie la connexion et refuse tout autre compte. Il ne fait que
-  lire, et ne montre jamais le code PIN parent.
-- Les mots de passe sont gérés par Supabase Auth. La longueur minimale est de 8 caractères.
+- Les échanges entre l'application et nos serveurs sont **chiffrés**.
+- Les photos et les fichiers audio sont dans des espaces **privés**.
+- Chaque famille est **isolée** : un parent ne peut lire que les données de ses enfants.
+- Le code parent est chiffré de façon irréversible et se bloque après plusieurs essais
+  ratés.
+- Nos journaux techniques ne contiennent jamais la voix, et seul le journal de la bêta
+  (3.8) contient le texte des échanges.
 
-## 10. Phase bêta : ce que l'équipe peut voir
+## 10. Pendant la bêta : la relecture
 
-Aristocles est en version bêta, testée par un cercle fermé de familles. Pour suivre cette
-bêta et améliorer le tuteur, le fondateur dispose d'un **tableau de bord de suivi des
-testeurs**. Depuis le 16 septembre 2026, on n'y entre plus par un mot de passe partagé :
-il ne s'ouvre qu'avec le **compte personnel du fondateur**, qui en est le **seul lecteur**.
+Aristocles est en bêta, testé par un cercle fermé de familles. Pendant la bêta, pour
+vérifier qu'Ari ne se trompe pas et ne donne jamais la réponse, le fondateur relit des
+échanges, aidé d'outils d'intelligence artificielle. Personne d'autre n'y a accès.
 
-Ce tableau de bord montre **tout ce que la bêta recueille**, famille par famille et enfant
-par enfant :
+Pour cela, il dispose d'un tableau de bord qui ne s'ouvre qu'avec son compte personnel.
+Il y voit ce que la bêta recueille, famille par famille : le profil de l'enfant et votre
+adresse e-mail, les séances et leurs échanges mot à mot, les bilans, les photos encore
+conservées, les retours et les événements techniques. Il n'y voit jamais votre code
+parent. Il s'en sert aussi pour comprendre un problème que vous nous signalez.
 
-- le prénom, la classe et le genre de l'enfant, et l'**adresse e-mail du parent** ;
-- les séances, les exercices et leur issue, les dictées, les devoirs, les synthèses rédigées
-  de chaque écran, les résumés de séance et les souvenirs pédagogiques (3.6) ;
-- vos **conversations avec Ari** dans l'espace parent ;
-- le **mot à mot des échanges** entre l'enfant et Ari (3.5) : ce que l'enfant a dit,
-  transcrit, et ce qu'Ari a répondu ;
-- la **copie complète des échanges avec l'IA** (3.8) ;
-- les **événements d'usage** (3.7) et les événements de séance, les coûts et durées des
-  appels d'IA ;
-- les **photos du cahier**, qu'il peut ouvrir par un lien valable cinq minutes, tant
-  qu'elles n'ont pas été effacées (90 jours au plus, section 5), y compris les photos des
-  copies de dictée, qui seront toutes effacées à la fin de la bêta (3.4).
-
-Il ne montre jamais le code PIN parent, et il ne fait que lire : il ne modifie aucune donnée.
-
-Le fondateur s'en sert pour **diagnostiquer un problème** signalé par une famille, et pour
-**relire les tours d'Ari** afin d'améliorer ses consignes. Il peut aussi consulter ces
-données directement dans la base. Personne d'autre n'a cet accès pendant la bêta. Les journaux propres à la bêta (3.7 événements d'usage, 3.8) sont
-gardés 90 jours au plus ; le journal 3.8 sera retiré à la fin de la bêta.
+La copie complète des échanges avec l'IA (3.8) est gardée 90 jours au plus et sera
+retirée à la fin de la bêta.
 
 ## 11. Modifications de cette politique
 
-Cette politique sera mise à jour à chaque évolution du traitement (nouveau prestataire,
-nouvelle durée de conservation, ouverture au public). La version en vigueur est celle
-publiée sur le site d'Aristocles ; sa version et sa date figurent en tête.
+Cette politique change à chaque évolution de ce que fait l'application (nouveau
+prestataire, nouvelle durée, ouverture au public). La version en vigueur est celle
+publiée sur le site d'Aristocles ; son numéro et sa date figurent en tête.
