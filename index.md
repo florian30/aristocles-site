@@ -18,6 +18,8 @@ familles.
   l'application traite, qui le reçoit, combien de temps c'est conservé, et vos droits.
 - [Consentement des parents]({{ '/consentement/' | relative_url }}) — la page à lire avant
   de laisser votre enfant utiliser Aristocles.
+- [Conditions générales d'utilisation]({{ '/cgu/' | relative_url }}) — les règles d'usage
+  de l'application pendant la bêta.
 
 ## Contact
 
