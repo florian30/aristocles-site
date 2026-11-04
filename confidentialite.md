@@ -108,8 +108,9 @@ texte.
 
 - **Le texte obtenu est conservé** avec la séance (3.5).
 - **De courts extraits de voix peuvent être conservés 30 jours**, dans un espace privé
-  chez notre hébergeur, à Paris. Ils ne servent qu'à une chose : vérifier qu'Ari a bien
-  compris ce que votre enfant a dit, pour améliorer sa compréhension. Ils sont ensuite
+  chez notre hébergeur, à Paris. Ils servent à améliorer la façon dont Ari comprend votre
+  enfant : vérifier la qualité de la transcription et comparer des outils de
+  transcription. Ils sont ensuite
   effacés automatiquement, et plus tôt si vous supprimez le profil de l'enfant ou votre
   compte (7).
 
