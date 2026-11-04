@@ -6,7 +6,7 @@ permalink: /consentement/
 
 > **TL;DR** — Une page à lire avant de laisser votre enfant utiliser Aristocles. Votre
 > enfant va **parler à Ari**, un tuteur robot qui ne donne jamais la réponse. Pour cela,
-> l'app envoie sa **voix** (transcrite puis effacée), les **photos** de son cahier (gardées
+> l'app envoie sa **voix** (transcrite ; de courts extraits gardés 30 jours, puis effacés), les **photos** de son cahier (gardées
 > 90 jours) et le **texte des échanges** (gardé tant que le compte existe) à des services
 > d'intelligence artificielle aux États-Unis. Le reste est stocké à Paris. Pas de pub, pas de
 > pistage, pas de revente. **Pendant la bêta**, l'app enregistre aussi les **écrans consultés
@@ -59,7 +59,7 @@ choisissez.
 | Votre **e-mail** et votre mot de passe | Supabase, Paris | Tant que le compte existe |
 | Le **prénom**, le genre et la classe de votre enfant (et, s'il le dit à Ari, son école et le prénom de son enseignant). **À partir de la prochaine version de l'application**, Ari ne demande plus l'école ni le prénom de l'enseignant ; les réponses déjà données sont conservées, et vous pouvez en demander l'effacement | Supabase, Paris ; le prénom et la classe sont aussi transmis aux services d'IA en mode Devoirs, pour les synthèses et les bilans ; **à partir de la prochaine version de l'application**, aussi en Apprentissage. L'école et l'enseignant ne sont transmis à aucun service d'IA | Tant que le compte existe |
 | **À partir de la prochaine version de l'application**, les **deux réponses** de votre enfant à la première rencontre : ce qu'il aime faire en dehors de l'école, ce qu'il préfère à l'école, enregistrées telles qu'il les a dites (elles peuvent contenir un nom s'il en a dit un) | Supabase, Paris ; transmises au tuteur (Anthropic, États-Unis, avec OpenRouter en secours) à chaque échange du mode Apprentissage, coupées à 120 caractères. **Pendant la rencontre**, chaque réponse est aussi envoyée **une fois** à ce service, avec la question posée et le **genre** de votre enfant (pour accorder les mots d'Ari, et pour cela seulement), pour qu'Ari y réagisse d'une phrase — **sans le prénom ni la classe** | Tant que le compte existe |
-| La **voix** de votre enfant, pendant qu'il appuie sur le bouton | Transmise à OpenAI (États-Unis) pour être transcrite en texte, avec une courte amorce de texte pour aider la transcription ; **à partir de la prochaine version de l'application**, en mode Devoirs, cette amorce porte aussi une vingtaine de mots au plus de l'énoncé affiché (OpenAI reçoit déjà les photos du cahier en Devoirs : aucun nouveau prestataire) | **Jamais conservée** : ni chez nous, ni en base |
+| La **voix** de votre enfant, pendant qu'il appuie sur le bouton | Transmise à OpenAI (États-Unis) pour être transcrite en texte, avec une courte amorce de texte pour aider la transcription ; **à partir de la prochaine version de l'application**, en mode Devoirs, cette amorce porte aussi une vingtaine de mots au plus de l'énoncé affiché (OpenAI reçoit déjà les photos du cahier en Devoirs : aucun nouveau prestataire). De courts extraits sont gardés chez Supabase (Paris), dans un espace privé, pour vérifier la qualité de la transcription | **30 jours** pour ces extraits, puis effacés automatiquement ; le reste n'est pas conservé |
 | Les **photos** du cahier | Stockées chez Supabase (Paris), dans un espace privé ; lues par un service d'IA (Anthropic, États-Unis, avec OpenRouter en secours ; en mode Devoirs, également OpenAI) | **90 jours**, puis effacées automatiquement |
 | Le **texte des échanges** avec Ari (ce que votre enfant a dit, transcrit ; ce qu'Ari a répondu), les exercices faits, les dictées, les synthèses de séance et vos bilans | Supabase, Paris ; le texte est transmis aux services d'IA (OpenAI pour le mode Devoirs et les indices ; Anthropic pour le reste, avec OpenRouter en secours) pour qu'Ari réponde et pour rédiger les bilans | Tant que le compte existe |
 | Des **souvenirs pédagogiques** : les notions acquises ou fragiles, les mots de dictée qui posent problème | Supabase, Paris | Tant que le compte existe |
@@ -80,7 +80,7 @@ montre **tout ce que la bêta recueille** : le prénom, la classe et le genre de
 votre adresse e-mail, les séances, les exercices, les dictées, les devoirs, les synthèses
 et les bilans, vos conversations avec Ari, le **mot à mot des échanges** de votre enfant
 avec Ari, la **copie complète de ce qui est envoyé à l'IA**, les **événements d'usage**, et
-les **photos du cahier** tant qu'elles ne sont pas effacées. Il ne montre jamais votre code
+les **photos du cahier** tant qu'elles ne sont pas effacées, et les **enregistrements de la voix** de votre enfant, gardés 30 jours, qu'il peut réécouter. Il ne montre jamais votre code
 PIN, et il ne modifie rien.
 
 Le fondateur s'en sert pour comprendre pourquoi Ari a dit ce qu'il a dit et le corriger,
