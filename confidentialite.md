@@ -4,10 +4,10 @@ title: "Politique de confidentialité — Aristocles (version bêta)"
 permalink: /confidentialite/
 ---
 
-Version 0.16 du 26-10-2026. Ce qui change depuis la version 0.15 : Ari s'adresse
-désormais directement à Anthropic ; OpenRouter, qui transmettait jusqu'ici les échanges à
-Anthropic, ne sert plus qu'en secours, quand Anthropic ne répond pas. Les données
-envoyées ne changent pas.
+Version 0.18 du 04-11-2026. Ce qui change depuis la version 0.17 : pour améliorer la
+façon dont Ari comprend votre enfant, de courts extraits de sa voix peuvent être conservés
+30 jours dans un espace privé, puis sont effacés automatiquement (3.3 et 5) ; pendant la
+bêta, le fondateur peut les réécouter (10).
 
 ## L'essentiel
 
@@ -17,13 +17,16 @@ envoyées ne changent pas.
    nécessaire : un prénom, un genre et une classe pour l'enfant, votre adresse e-mail pour
    vous. Pas de compte enfant, ni nom de famille, ni date de naissance, ni photo de
    l'enfant.
-2. **Ce que nous gardons, et combien de temps.** La voix n'est jamais enregistrée : elle
-   devient du texte, puis disparaît. Les photos de devoirs sont effacées au bout de
-   90 jours. Les échanges avec Ari et les bilans sont gardés tant que le compte existe,
-   chez notre hébergeur, à Paris. Ari retient aussi, sans aucune parole de l'enfant, la
-   méthode de calcul de sa classe (3.5).
-3. **Qui d'autre les reçoit.** Pour comprendre la voix, lire une photo et répondre, Ari
-   s'appuie sur des services d'intelligence artificielle situés aux États-Unis (OpenAI et
+2. **Ce que nous gardons, et combien de temps.** La voix de votre enfant devient du
+   texte ; de courts extraits peuvent être conservés 30 jours, le temps de vérifier
+   qu'Ari l'a bien comprise, puis sont effacés automatiquement. Les photos de devoirs
+   sont effacées au bout de 90 jours. Les échanges avec Ari et les bilans sont gardés tant que le compte existe,
+   chez notre hébergeur, à Paris. Ari retient aussi, sans garder les phrases de l'enfant,
+   ses centres d'intérêt, ses moments forts (effacés au bout de 3 mois) et la méthode de
+   calcul de sa classe (3.5).
+3. **Qui d'autre les reçoit.** Pour comprendre la voix, lire une photo, répondre et relire
+   chaque séance, Ari s'appuie sur des services d'intelligence artificielle situés aux
+   États-Unis (OpenAI et
    Anthropic, avec OpenRouter en secours), liés à nous par contrat. Ils reçoivent le
    prénom et la classe de l'enfant, jamais votre adresse e-mail. Les e-mails passent par
    Resend ; les notifications, si vous les activez, par Google et Apple.
@@ -32,8 +35,10 @@ envoyées ne changent pas.
    Personne d'autre n'y a accès.
 5. **Ce que nous ne faisons jamais.** Aucune publicité, aucune mesure d'audience, aucun
    pistage. Les données de votre enfant ne sont jamais vendues, louées ni cédées.
-6. **Vous gardez la main.** Vous supprimez le profil d'un enfant, ou tout le compte,
-   vous-même depuis l'application, immédiatement. Pour obtenir une copie de vos données,
+6. **Vous gardez la main.** Depuis la fiche de votre enfant, vous voyez ce qu'Ari retient
+   de lui, l'effacez élément par élément, ou coupez cette mémoire. Vous supprimez le
+   profil d'un enfant, ou tout le compte, vous-même depuis l'application, immédiatement.
+   Pour obtenir une copie de vos données,
    les corriger ou retirer votre accord : contact@aristocles.app. Vous pouvez aussi
    saisir la CNIL.
 
@@ -101,12 +106,16 @@ L'enfant parle à Ari **en appuyant sur un bouton** : le micro n'écoute que pen
 l'appui. L'enregistrement est envoyé à OpenAI (service Whisper), qui le transforme en
 texte.
 
-- **L'enregistrement n'est conservé nulle part**, ni sur nos serveurs, ni dans une base de
-  données.
 - **Le texte obtenu est conservé** avec la séance (3.5).
+- **De courts extraits de voix peuvent être conservés 30 jours**, dans un espace privé
+  chez notre hébergeur, à Paris. Ils servent à améliorer la façon dont Ari comprend votre
+  enfant : vérifier la qualité de la transcription et comparer des outils de
+  transcription. Ils sont ensuite
+  effacés automatiquement, et plus tôt si vous supprimez le profil de l'enfant ou votre
+  compte (7).
 
-Votre voix, quand vous dictez un retour (3.7), suit le même chemin : elle est transcrite,
-puis l'enregistrement est oublié. Vous relisez le texte avant de l'envoyer.
+Votre voix, quand vous dictez un retour (3.7), est seulement transcrite : l'enregistrement
+est oublié aussitôt. Vous relisez le texte avant de l'envoyer.
 
 La voix d'Ari est fabriquée à partir de son texte par OpenAI (synthèse vocale). Elle n'est
 pas conservée sur nos serveurs.
@@ -153,15 +162,50 @@ autre. Ari ne retient que :
 autre chose que ces noms. Ce souvenir est gardé **jusqu'à ce que l'enfant indique une
 autre façon de faire, ou jusqu'à la suppression du profil de l'enfant ou du compte**. Il
 n'expire pas de lui-même. Il n'est utilisé que par Ari, pour ne pas reposer la question :
-le modèle d'IA en reçoit le nom de la méthode, sans rien de plus sur l'enfant. Il n'existe
-pas encore d'écran pour le consulter ou en effacer un seul, mais il disparaît avec le
-profil ou le compte (section 7).
+le modèle d'IA en reçoit le nom de la méthode, sans rien de plus sur l'enfant. Vous le
+voyez et l'effacez depuis la fiche de l'enfant, avec le reste de ce qu'Ari retient
+(ci-dessous), et il disparaît avec le profil ou le compte (section 7).
+
+**Ce qu'Ari retient de votre enfant.** À la fin de chaque séance d'Apprentissage ou de
+Devoirs, un modèle d'IA (Claude, d'Anthropic) relit la séance et propose à Ari deux
+choses à retenir :
+
+- ses **centres d'intérêt** : un thème de quelques mots (« les dinosaures », « le foot »)
+  que l'enfant a évoqué de lui-même, en dehors de l'exercice ;
+- ses **moments forts** : une erreur qu'il a corrigée seul, un effort poursuivi jusqu'à
+  réussir, une méthode qu'il a trouvée lui-même, une belle explication, une question
+  curieuse. Chacun est décrit par une phrase courte, à la troisième personne.
+
+Rien n'est retenu sur la seule parole du modèle : pour chaque proposition, le programme
+vérifie dans la séance que l'enfant a bien dit la phrase citée, ou que l'exercice a bien
+été réussi, et écarte ce qui ne se vérifie pas. Seuls le thème ou la phrase courte sont
+gardés : **jamais les mots de l'enfant**. Le modèle a pour consigne de ne rien retenir
+sur sa famille, sa santé, son école ou ses camarades. En Dictée, aucun modèle ne relit la
+séance : le programme note seulement, comme moment fort, un mot que l'enfant a corrigé
+seul.
+
+Ari s'en sert pour habiller ses exemples et ses dictées avec ce que l'enfant aime, et
+pour s'appuyer sur ce qu'il a déjà réussi, sans lui dire qu'il s'en souvient. Vous les
+retrouvez dans vos conversations avec Ari dans l'espace parent.
+
+Cette mémoire est **allumée par défaut**. Depuis la fiche de votre enfant (Espace parent ›
+Mes enfants › la fiche de l'enfant › Ce qu'Ari retient), vous voyez tout ce qu'Ari
+retient (centres d'intérêt, moments forts, méthode de calcul), vous effacez chaque
+élément un par un, et vous pouvez **couper la mémoire** : Ari ne retient alors plus rien
+et ne se sert plus de ce qu'il avait retenu. Ce qui a déjà été retenu reste visible sur la
+fiche, où vous l'effacez vous-même. Les
+**moments forts sont effacés au bout de 3 mois** ; les centres d'intérêt restent tant
+que vous ne les effacez pas, ceux qu'il évoque le plus souvent passant en premier. Tout
+disparaît avec le profil ou le compte (section 7).
 
 **Ce que reçoivent les modèles d'IA.** À chaque échange, le modèle reçoit le prénom et la
 classe de l'enfant, ce qu'il travaille et la conversation en cours. En mode Apprentissage,
 il reçoit aussi les deux réponses de la première rencontre (3.2). Pendant la rencontre
 elle-même, Ari réagit à chaque réponse : le modèle reçoit alors la réponse et le genre de
-l'enfant, sans son prénom ni sa classe.
+l'enfant, sans son prénom ni sa classe. Pendant une séance, le modèle peut aussi recevoir
+un centre d'intérêt et un moment fort retenus (ci-dessus), pour habiller un exemple. À la
+fin d'une séance d'Apprentissage ou de Devoirs, il reçoit une dernière fois les échanges
+de la séance, les exercices faits et le prénom de l'enfant, pour la relire.
 
 ### 3.6 Les notifications
 
@@ -225,7 +269,7 @@ techniques. Ils traitent les données **pour notre compte**, selon nos instructi
 |---|---|---|
 | **Supabase** (hébergement) | **France (Paris)** | Tout ce que décrit la section 3 : c'est là que vos données sont gardées |
 | **OpenAI** | États-Unis | La voix, pour la transcrire ; le texte d'Ari, pour lui donner une voix ; en mode Devoirs et pour les indices, les échanges, les photos et le prénom de l'enfant |
-| **Anthropic** (modèles Claude) | États-Unis | Les échanges, les photos, le prénom, le genre et la classe de l'enfant, pour qu'Ari réponde, lise les devoirs et écrive les bilans et les notifications ; les retours que le fondateur reprend dans son outil de développement (3.7) |
+| **Anthropic** (modèles Claude) | États-Unis | Les échanges, les photos, le prénom, le genre et la classe de l'enfant, pour qu'Ari réponde, lise les devoirs, écrive les bilans et les notifications, et relise chaque séance d'Apprentissage ou de Devoirs pour en retenir les centres d'intérêt et les moments forts (3.5) ; les retours que le fondateur reprend dans son outil de développement (3.7) |
 | **OpenRouter** (secours) | États-Unis | Seulement quand Anthropic ne répond pas : les mêmes données, qu'il transmet aussitôt à Anthropic |
 | **Resend** (envoi des e-mails) | États-Unis | Votre adresse e-mail et les e-mails de connexion ; l'e-mail du matin du fondateur, qui reprend le texte de vos retours (3.7) |
 | **Firebase** (service de Google), puis Apple ou Google | États-Unis | Si vous activez les notifications : le jeton de votre téléphone et le texte de chaque notification (3.6) |
@@ -256,10 +300,12 @@ gardé plus longtemps. Resend garde une copie des e-mails envoyés.
 
 | Donnée | Durée |
 |---|---|
-| Enregistrement de la voix | **Jamais conservé** |
+| Extraits de voix de l'enfant | **30 jours**, puis effacement automatique ; plus tôt si vous supprimez le profil ou le compte |
 | Photos du cahier (devoirs, dictées) | **90 jours**, puis effacement automatique. Les photos de dictée sont toutes effacées à la fin de la bêta |
 | Compte, profils, échanges avec Ari, exercices, dictées et leur audio, listes de mots, bilans, suivi des notions | **Tant que le compte existe** |
 | Méthode de calcul de la classe retenue par Ari | **Jusqu'à ce que l'enfant indique une autre façon de faire**, ou jusqu'à la suppression du profil ou du compte |
+| Centres d'intérêt retenus par Ari | **Tant que le compte existe**, ou jusqu'à ce que vous les effaciez depuis la fiche de l'enfant |
+| Moments forts retenus par Ari | **3 mois**, puis effacement automatique ; plus tôt si vous les effacez depuis la fiche de l'enfant |
 | Listes de mots non confirmées (Dictée) | **7 jours**, puis effacement |
 | Journal des appels d'IA (sans le texte des échanges) | **12 mois** (365 jours), puis effacement |
 | Événements de séance (sans le contenu des échanges) | **90 jours**, puis effacement |
@@ -300,6 +346,8 @@ Vous disposez, pour vous et pour vos enfants, des droits suivants :
     - **tout le compte** : Espace parent › Mon compte › Supprimer mon compte.
       L'effacement est immédiat et définitif, fichiers compris.
   Votre mot de passe vous est demandé dans les deux cas.
+    - **ce qu'Ari retient de l'enfant** (3.5) : élément par élément, depuis la fiche
+      de l'enfant › Ce qu'Ari retient, sans mot de passe.
 - **Retrait du consentement**, à tout moment.
 - **Réclamation** auprès de la CNIL (www.cnil.fr), si vous estimez que vos droits ne sont
   pas respectés.
@@ -332,10 +380,15 @@ vérifier qu'Ari ne se trompe pas et ne donne jamais la réponse, le fondateur r
 échanges, aidé d'outils d'intelligence artificielle. Personne d'autre n'y a accès.
 
 Pour cela, il dispose d'un tableau de bord qui ne s'ouvre qu'avec son compte personnel.
-Il y voit ce que la bêta recueille, famille par famille : le profil de l'enfant et votre
-adresse e-mail, les séances et leurs échanges mot à mot, les bilans, les photos encore
-conservées, les retours et les événements techniques. Il n'y voit jamais votre code
-parent. Il s'en sert aussi pour comprendre un problème que vous nous signalez.
+Il y voit ce que la bêta recueille, famille par famille :
+
+- Le profil de l'enfant, les centres d'intérêt qu'Ari a retenus et votre adresse e-mail.
+- Les séances et leurs échanges mot à mot, les bilans, les photos encore conservées.
+- Les enregistrements de la voix de votre enfant, gardés 30 jours à des fins d'amélioration du service (pour vérifier la qualité de la transcription et/ou comparer des outils de transcription), puis effacés automatiquement.
+- Les retours et les événements techniques.
+
+Il n'y voit jamais votre code parent. Il s'en sert aussi pour comprendre un problème que
+vous nous signalez.
 
 La copie complète des échanges avec l'IA (3.8) est gardée 90 jours au plus et sera
 retirée à la fin de la bêta.
