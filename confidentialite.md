@@ -4,10 +4,11 @@ title: "Politique de confidentialité — Aristocles (version bêta)"
 permalink: /confidentialite/
 ---
 
-Version 0.18 du 04-11-2026. Ce qui change depuis la version 0.17 : pour améliorer la
-façon dont Ari comprend votre enfant, de courts extraits de sa voix peuvent être conservés
-30 jours dans un espace privé, puis sont effacés automatiquement (3.3 et 5) ; pendant la
-bêta, le fondateur peut les réécouter (10).
+Version 0.19 du 26-11-2026. Ce qui change depuis la version 0.18 : les courts extraits
+de la voix de votre enfant et les photos de ses devoirs sont désormais gardés 12 mois
+(au lieu de 30 jours pour la voix et 90 jours pour les photos), pour mieux vérifier et
+améliorer la façon dont Ari le comprend ; ils sont ensuite effacés automatiquement
+(3.3, 3.4, 5 et 10).
 
 ## L'essentiel
 
@@ -18,9 +19,9 @@ bêta, le fondateur peut les réécouter (10).
    vous. Pas de compte enfant, ni nom de famille, ni date de naissance, ni photo de
    l'enfant.
 2. **Ce que nous gardons, et combien de temps.** La voix de votre enfant devient du
-   texte ; de courts extraits peuvent être conservés 30 jours, le temps de vérifier
+   texte ; de courts extraits peuvent être conservés 12 mois, le temps de vérifier
    qu'Ari l'a bien comprise, puis sont effacés automatiquement. Les photos de devoirs
-   sont effacées au bout de 90 jours. Les échanges avec Ari et les bilans sont gardés tant que le compte existe,
+   sont effacées au bout de 12 mois. Les échanges avec Ari et les bilans sont gardés tant que le compte existe,
    chez notre hébergeur, à Paris. Ari retient aussi, sans garder les phrases de l'enfant,
    ses centres d'intérêt, ses moments forts (effacés au bout de 3 mois) et la méthode de
    calcul de sa classe (3.5).
@@ -107,7 +108,7 @@ l'appui. L'enregistrement est envoyé à OpenAI (service Whisper), qui le transf
 texte.
 
 - **Le texte obtenu est conservé** avec la séance (3.5).
-- **De courts extraits de voix peuvent être conservés 30 jours**, dans un espace privé
+- **De courts extraits de voix peuvent être conservés 12 mois**, dans un espace privé
   chez notre hébergeur, à Paris. Ils servent à améliorer la façon dont Ari comprend votre
   enfant : vérifier la qualité de la transcription et comparer des outils de
   transcription. Ils sont ensuite
@@ -128,7 +129,7 @@ texte.
 
 - Les photos sont rangées dans un **espace privé** : seul vous pouvez les revoir (et, pendant
   la bêta, le fondateur : section 10).
-- **Elles sont effacées automatiquement au bout de 90 jours.** Les photos de dictée sont
+- **Elles sont effacées automatiquement au bout de 12 mois.** Les photos de dictée sont
   en plus **toutes effacées à la fin de la bêta**.
 - Le **texte lu** sur la photo est gardé avec la séance.
 - L'application n'ouvre la **galerie de photos** du téléphone qu'**à votre demande**, pour
@@ -300,8 +301,8 @@ gardé plus longtemps. Resend garde une copie des e-mails envoyés.
 
 | Donnée | Durée |
 |---|---|
-| Extraits de voix de l'enfant | **30 jours**, puis effacement automatique ; plus tôt si vous supprimez le profil ou le compte |
-| Photos du cahier (devoirs, dictées) | **90 jours**, puis effacement automatique. Les photos de dictée sont toutes effacées à la fin de la bêta |
+| Extraits de voix de l'enfant | **12 mois** (365 jours), puis effacement automatique ; plus tôt si vous supprimez le profil ou le compte |
+| Photos du cahier (devoirs, dictées) | **12 mois** (365 jours), puis effacement automatique. Les photos de dictée sont toutes effacées à la fin de la bêta |
 | Compte, profils, échanges avec Ari, exercices, dictées et leur audio, listes de mots, bilans, suivi des notions | **Tant que le compte existe** |
 | Méthode de calcul de la classe retenue par Ari | **Jusqu'à ce que l'enfant indique une autre façon de faire**, ou jusqu'à la suppression du profil ou du compte |
 | Centres d'intérêt retenus par Ari | **Tant que le compte existe**, ou jusqu'à ce que vous les effaciez depuis la fiche de l'enfant |
@@ -384,7 +385,7 @@ Il y voit ce que la bêta recueille, famille par famille :
 
 - Le profil de l'enfant, les centres d'intérêt qu'Ari a retenus et votre adresse e-mail.
 - Les séances et leurs échanges mot à mot, les bilans, les photos encore conservées.
-- Les enregistrements de la voix de votre enfant, gardés 30 jours à des fins d'amélioration du service (pour vérifier la qualité de la transcription et/ou comparer des outils de transcription), puis effacés automatiquement.
+- Les enregistrements de la voix de votre enfant, gardés 12 mois à des fins d'amélioration du service (pour vérifier la qualité de la transcription et/ou comparer des outils de transcription), puis effacés automatiquement.
 - Les retours et les événements techniques.
 
 Il n'y voit jamais votre code parent. Il s'en sert aussi pour comprendre un problème que
